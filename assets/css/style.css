@@ -1,0 +1,11 @@
+.foo {
+  padding: 0;
+}
+.foo:after {
+  content: ">";
+}
+
+.test {
+  width: 100px;
+  margin: 0;
+}

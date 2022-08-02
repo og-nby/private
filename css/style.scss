@@ -1,0 +1,14 @@
+// test
+.foo{
+    padding: 0;
+    &:after {
+        content: ">";
+
+    }
+}
+
+.test {
+    width: 100px;
+    margin: 0;
+}
+
