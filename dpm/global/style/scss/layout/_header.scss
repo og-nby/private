@@ -1,0 +1,31 @@
+// dpm共通ヘッダー
+
+@use "../setting/mixins" as *;
+
+.l-global-header {
+	min-height: 64px;
+	padding: 8px 16px 6px;
+	background-color: #fff;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.l-global-header__logo {
+	max-width: 137px;
+	@media screen and(min-width: 641px) {
+		max-width: 164px;
+	}
+}
+.l-g-hader-logo-copy {
+	text-align: center;
+	font-size: 8px;
+	@media screen and(min-width: 641px) {
+		font-size: 10px;
+	}
+	font-weight: var(--bold-700);
+	color: var(--gray800);
+	@include lineHeightCrop(1);
+	margin-top: 3px;
+}
+

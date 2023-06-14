@@ -1,0 +1,198 @@
+// エレメント用スタイル
+
+@use "../setting/mixins" as *;
+
+// 背景画像用キャッシュ※キャッシュ変数名はページ個別でユニークな名称を設定すること
+// $bgImgCache: '?v=$!{cache_css_dpm-test}&d=$!{categoryOfDevice}';
+
+@mixin elementStyle($deviceSelect) {
+
+	.b-toparea {
+		padding-bottom: 6px;
+	}
+
+	.c-wrap-heading {
+		display: flex;
+		align-items: center;
+		gap: 8px 0;
+		margin-bottom: 24px;
+	}
+	.c-heading-lv1 {
+		font-weight: var(--bold-700);
+		font-size: var(--large-fontSize);
+		line-height: var(--narrow-lineHeight);
+		@include lineHeightCrop(1.35);
+	}
+
+
+	.c-heading-lv2 {
+		font-weight: var(--bold-600);
+		font-size: var(--medium-fontSize);
+		line-height: var(--narrow-lineHeight);
+		@include lineHeightCrop(1.35);
+	}
+
+	.c-text {
+		font-size: var(--medium-fontSize);
+		line-height: var(--default-lineHeight);
+		@include lineHeightCrop(1.5);
+	}
+
+
+
+	%c-btn-default {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		min-height: 46px;
+		border-radius: var(--radius-medium);
+		font-weight: var(--bold-600);
+		font-size: var(--medium-fontSize);
+		letter-spacing: .01em;
+		cursor: pointer;
+		padding: 14px;
+	}
+	%c-btn-small {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		min-height: 34px;
+		border-radius: var(--radius-low);
+		font-weight: var(--bold-600);
+		font-size: var(--small-fontSize);
+		letter-spacing: .01em;
+		cursor: pointer;
+		padding: 8px;
+	}
+
+	.c-button-primary {
+		@extend %c-btn-default;
+		background-color: var(--primary);
+		color: #fff;
+		&.--mf-disable {
+			background-color: var(--gray400);
+			cursor: default;
+		}
+	}
+	.c-button-secondary {
+		@extend %c-btn-default;
+		background-color: #fff;
+		color:  var(--gray800);
+		border: 1px solid var(--gray400);
+		cursor: pointer;
+	}
+
+	.c-button-small {
+		@extend %c-btn-small;
+		background-color: var(--primary);
+		color: #fff;
+		&.--mf-disable {
+			background-color: var(--gray400);
+			cursor: default;
+		}
+	}
+
+	.c-btn-text {
+		@include lineHeightCrop(1.29);
+		line-height: 1.29;
+		text-align: center;
+		.c-button-small & {
+			@include lineHeightCrop(1.5);
+			line-height: var(--default-lineHeight);
+			font-size: var(--small-fontSize);
+		}
+	}
+
+	%c-label-primary {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--primary);
+		color: #fff;
+		font-weight: var(--bold-600);
+		font-size: var(--medium-fontSize);
+	}
+	.c-button-label-primary-lg {
+		@extend %c-label-primary;
+		height: 46px;
+		padding: 14px 24px;
+		border-radius: var(--radius-medium);
+	}
+	.c-button-label-primary-md {
+		@extend %c-label-primary;
+		height: 36px;
+		padding: 8px 16px;
+		border-radius: var(--radius-medium);
+	}
+	.c-button-label-primary-sm {
+		@extend %c-label-primary;
+		height: 28px;
+		padding: 4px 8px;
+		border-radius: 6px;
+	}
+	.c-button-label-primary-xsm {
+		@extend %c-label-primary;
+		height: 28px;
+		padding: 4px 8px;
+		border-radius: 30px;
+	}
+
+	%c-label-secondary {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #fff;
+		color:  var(--gray800);
+		border: 1px solid var(--gray400);
+		font-weight: var(--bold-600);
+		font-size: var(--medium-fontSize);
+	}
+	.c-button-label-secondary-lg {
+		@extend %c-label-secondary;
+		height: 46px;
+		padding: 14px 24px;
+		border-radius: var(--radius-medium);
+	}
+	.c-button-label-secondary-md {
+		@extend %c-label-secondary;
+		height: 36px;
+		padding: 8px 16px;
+		border-radius: var(--radius-medium);
+	}
+	.c-button-label-secondary-sm {
+		@extend %c-label-secondary;
+		height: 28px;
+		padding: 4px 8px;
+		border-radius: 6px;
+	}
+	.c-button-label-secondary-xsm {
+		@extend %c-label-secondary;
+		height: 28px;
+		padding: 4px 8px;
+		border-radius: 30px;
+	}
+
+	.c-button-label-text {
+		text-align: center;
+		@include lineHeightCrop(1.29);
+		line-height: var(1.29);
+		.c-button-label-primary-md &,
+		.c-button-label-primary-sm &,
+		.c-button-label-primary-xsm & {
+			@include lineHeightCrop(1.43);
+			line-height: var(1.43);
+		}
+	}
+
+	.c-btn-icon-favarite {
+		margin-right: var(--bs8);
+	}
+
+	.foo {
+		background: url(../foo.png)
+	}
+
+// Mixin End
+}

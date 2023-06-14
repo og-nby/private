@@ -1,0 +1,50 @@
+## ドロワーナビ用vm
+<nav class="l-g-drawer">
+	<div class="l-g-drawer__inner">
+
+		## <div class="c-wrap-content">
+		## 	<a href="#"><img src="/bnr_foo.png" alt="バナー"></a>
+		## </div>
+		## <!-- /.c-wrap-content -->
+		
+		<section class="l-g-drawer-menu">
+			<h2 class="l-g-drawer-menu__header">人気メニュー</h2>
+			<ul class="l-g-drawer-menu__list">
+				<li>
+					<a class="l-g-menu-link --mf-favorite --mf-favorite-kuji" href="#">くじ・すごろく</a>
+				</li>
+				<li>
+					<a class="l-g-menu-link --mf-favorite --mf-favorite-stamp" href="#">スタンプラリー</a>
+				</li>
+			</ul>
+		</section>
+		<!-- /.l-g-menu -->
+	
+		<section class="l-g-drawer-menu">
+			<h2 class="l-g-drawer-menu__header">その他のメニュー</h2>
+			<ul class="l-g-drawer-menu__list">
+				<li>
+					<a class="l-g-menu-link" href="#">ガイド</a>
+				</li>
+				<li>
+					<a class="l-g-menu-link" href="#">ランキング</a>
+				</li>
+			</ul>
+		</section>
+		<!-- /.l-g-menu -->
+	
+		<section class="l-g-drawer-menu">
+			<h2 class="l-g-drawer-menu__header">ドコモのサービス一覧</h2>
+			<ul class="l-g-drawer-menu__list --mf-services">
+				<li>
+					<a class="l-g-menu-link" href="#">dショッピング</a>
+				</li>
+				<li>
+					<a class="l-g-menu-link" href="#">dゲーム</a>
+				</li>
+			</ul>
+		</section>
+		<!-- /.l-g-menu -->
+	</div>
+</nav>
+<!-- /.l-g-drawer -->

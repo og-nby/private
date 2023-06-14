@@ -1,0 +1,90 @@
+## 個別ページ定義ファイル
+#parse("$!{baseDirectory}/guideline/dpm/text/define/define.vm")
+
+<!DOCTYPE HTML>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>テキスト見本｜dマーケット｜NTTドコモ公式</title>
+		## viewport設定
+		#if ($isSp)
+			<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+		#else
+			<meta name="viewport" content="width=980">
+		#end
+		<meta http-equiv="content-script-type" content="text/javascript">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		## dマーケット内共通ファビコン・ホームアイコン用vm
+		#parse("$!{baseDirectory}/template/parts/parts_common_favicon.vm")
+		<link rel="stylesheet" href="$!{aplServerUrl}/guideline/dpm/global/style/style_css.cssv?v=$!{cache_css_global}&d=$!{categoryOfDevice}">
+		<link rel="stylesheet" href="$!{aplServerUrl}/guideline/dpm/text/style/style_css.cssv?v=$!{cache_css_dpm_text}&d=$!{categoryOfDevice}">
+
+	</head>
+	<body>
+
+		<div class="l-root-container">
+
+			## ヘッダー用vm
+			#parse("$!{baseDirectory}/guideline/dpm/global/header/parts_g_header.vm")
+			<div class="l-global-body">
+
+				<section class="b-sec-main">
+
+					<header class="c-wrap-heading">
+						<h2 class="c-heading-lv1">テキスト見本</h2>
+					</header>
+				
+					<div class="b-wrap-content">
+						<h1 class="c-heading-lv1">見出し1のテキスト見出し1のテキスト見出し1のテキスト見出し1のテキスト見出し1のテキスト</h1>
+						<!-- /.c-heading-lv1 -->
+					</div>
+				
+					<div class="b-wrap-content">
+						<h2 class="c-heading-lv2">見出し2のテキスト見出し2のテキスト見出し2のテキスト見出し2のテキスト見出し2のテキスト</h2>
+						<!-- /.c-heading-lv2 -->
+					</div>
+				
+					<div class="b-wrap-content">
+						<h3 class="c-heading-lv3">見出し3のテキスト見出し3のテキスト見出し3のテキスト見出し3のテキスト見出し3のテキスト</h3>
+						<!-- /.c-heading-lv3 -->
+					</div>
+				
+					<div class="b-wrap-content">
+						<p class="c-text">デフォルトのテキストサイズデフォルトのテキストサイズデフォルトのテキストサイズデフォルトのテキストサイズ</p>
+						<!-- /.c-heading-lv3 -->
+					</div>
+				
+					<div class="b-wrap-content">
+						<p class="c-text-large">大きいテキストサイズ大きいテキストサイズ大きいテキストサイズ大きいテキストサイズ</p>
+					</div>
+				
+					<div class="b-wrap-content">
+						<p class="c-text-small">小さいテキストサイズ小さいテキストサイズ小さいテキストサイズ小さいテキストサイズ</p>
+					</div>
+				
+					<div class="b-wrap-content">
+						<p class="c-text-xsmall">さらに小さいテキストサイズさらに小さいテキストサイズさらに小さいテキストサイズさらに小さいテキストサイズ</p>
+					</div>
+				
+					<div class="b-wrap-content">
+						<p class="c-text-micro">最小のテキストサイズ最小のテキストサイズ最小のテキストサイズ最小のテキストサイズ</p>
+					</div>
+	
+				</section>
+				<!-- /.b-mainSec -->
+			</div>
+			<!-- /.l-body -->
+
+		</div>
+		<!-- /.l-root-container -->
+
+		## フッター
+		#parse("$!{baseDirectory}/guideline/dpm/global/footer/parts_g_footer.vm")
+
+	</body>
+</html>

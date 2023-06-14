@@ -1,0 +1,60 @@
+## 個別ページ定義ファイル
+#parse("$!{baseDirectory}/guideline/dpm/heading/define/define.vm")
+
+<!DOCTYPE HTML>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>見出し見本｜dマーケット｜NTTドコモ公式</title>
+		## viewport設定
+		#if ($isSp)
+			<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+		#else
+			<meta name="viewport" content="width=980">
+		#end
+		<meta http-equiv="content-script-type" content="text/javascript">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		## dマーケット内共通ファビコン・ホームアイコン用vm
+		#parse("$!{baseDirectory}/template/parts/parts_common_favicon.vm")
+		<link rel="stylesheet" href="$!{aplServerUrl}/guideline/dpm/global/style/style_css.cssv?v=$!{cache_css_global}&d=$!{categoryOfDevice}">
+		<link rel="stylesheet" href="$!{aplServerUrl}/guideline/dpm/heading/style/style_css.cssv?v=$!{cache_css_dpm_heading}&d=$!{categoryOfDevice}">
+
+	</head>
+	<body>
+
+		## ヘッダー用vm
+		#parse("$!{baseDirectory}/guideline/dpm/global/header/parts_g_header.vm")
+
+		<main class="l-mainContainer">
+
+			<!-- /.l-mainHeader -->
+
+			<section class="b-sec-main">
+
+				<header class="c-wrap-heading">
+					<h2 class="c-heading-lv1">見出し見本</h2>
+				</header>
+				<!-- /.c-wrap-heading -->
+				<div class="b-wrap-content">
+					<p class="c-text">デフォルトのテキストサイズデフォルトのテキストサイズデフォルトのテキストサイズデフォルトのテキストサイズ</p>
+					<!-- /.c-heading-lv3 -->
+				</div>
+
+
+			</section>
+			<!-- /.b-mainSec -->
+
+
+		</main>
+		<!-- /.l-mainCOntainer -->
+
+		## フッター
+		#parse("$!{baseDirectory}/guideline/dpm/global/footer/parts_g_footer.vm")
+
+	</body>
+</html>

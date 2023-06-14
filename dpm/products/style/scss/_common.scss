@@ -1,0 +1,54 @@
+// 個別ページ用スタイル
+
+
+// 背景画像用キャッシュ※キャッシュ変数名はページ個別でユニークな名称を設定すること
+$bgImgCache: '?v=$!{cache_css_dpm-test}&d=$!{categoryOfDevice}';
+
+
+
+// lineHeightCrop（line-heightの不要な余白を打ち消す）のmixinのコード例。
+// f-variables.scssという共通の変数定義用のscssファイルに記述して一元管理化しています。
+@mixin lineHeightCrop($line-height) {
+	&::before {
+		display: block;
+		width: 0;
+		height: 0;
+		margin-top: calc((1 - #{$line-height}) * .5em);
+		content: "";
+	}
+	&::after {
+		display: block;
+		width: 0;
+		height: 0;
+		margin-bottom: calc((1 - #{$line-height}) * .5em);
+		content: "";
+	}
+}
+
+
+// CSS出力用Mixin
+// デバイス分岐を行う場合のみ使用する
+// Mixinの外にスタイルを記述してしまうとCSSにスタイルが出力されません！
+
+@mixin deviceStyle($deviceSelect) {
+
+	.c-text-small {
+		font-size: var(--small-fontSize);
+		line-height: var(--default-lineHeight);
+		@include lineHeightCrop(1.5);
+	}
+
+	.c-text-xsmall {
+		font-size: 10px;
+		line-height: var(--default-lineHeight);
+		@include lineHeightCrop(1.5);
+	}
+
+	.c-text-micro {
+		font-size: 8px;
+		line-height: var(--default-lineHeight);
+		@include lineHeightCrop(1.5);
+	}
+
+// Mixin End
+}

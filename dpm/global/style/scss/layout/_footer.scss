@@ -1,0 +1,96 @@
+// dpm共通フッター
+
+@use "../setting/mixins" as *;
+
+.l-global-footer {
+	width: 100%;
+	max-width: 750px;
+	margin: auto;
+}
+
+.l-global-footer-sns {
+	display: flex;
+}
+%l-global-footer-sns {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	padding: 8px;
+}
+.l-global-footer-sns__twitter {
+	@extend %l-global-footer-sns;
+	background-color: #1DA1F2;
+	;
+}
+.l-global-footer-sns__line {
+	@extend %l-global-footer-sns;
+	background-color: #1DCD00;
+}
+.l-global-footer-sns__text {
+	color: #fff;
+	font-size: var(--small-fontSize);
+	line-height: 1.3333;
+	font-weight: var(--bold-600);
+	@include lineHeightCrop(1.3333);
+	letter-spacing: -0.05px;
+}
+.l-global-footer-sns__icon {
+	margin-right: var(--bs8);
+	display: block;
+	width: 20px;
+	height: auto;
+}
+
+.l-global-footer-services {
+	background-color: var(--primary);
+	color: #fff;
+	padding: 24px 16px;
+}
+
+.l-global-footer-services__sect:not(:last-child) {
+	margin-bottom: 16px;
+}
+.l-global-footer-services__title {
+	font-size: var(--small-fontSize);
+	line-height: 1.3333;
+	font-weight: var(--bold-600);
+	margin-bottom: 8px;
+	@include lineHeightCrop(1.3333);
+}
+.l-global-footer-services__list {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 8px 0;
+}
+.l-global-footer-services-text {
+	font-size: 11px;
+	line-height: 1.2727;
+	font-weight: 300;
+	@include lineHeightCrop(1.2727);
+}
+
+.l-global-footer-copy {
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px;
+}
+.l-global-footer-copy__text {
+	color: var(--primary);
+	font-size: var(--small-fontSize);
+	&::before {
+		display: block;
+		width: 0;
+		height: 0;
+		margin-top: calc((1 - 1.5) * .5em);
+		content: "";
+	}
+	&::after {
+		display: block;
+		width: 0;
+		height: 0;
+		margin-bottom: calc((1 - 1.5) * .5em);
+		content: "";
+	}
+}

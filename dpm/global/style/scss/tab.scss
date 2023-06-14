@@ -1,0 +1,16 @@
+// TAB用スタイル
+// 変数
+@use "setting" as *;
+
+// リセット・ベーススタイル読み込み
+@use "base" as *;
+
+// レイアウト読み込み
+@use "layout" as *;
+
+// 共通スタイル読み込み
+@use "component" as *;
+
+// Mixin呼び出し
+@include blockStyle(tab);
+@include elementStyle(tab);

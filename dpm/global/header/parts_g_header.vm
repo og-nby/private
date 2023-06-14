@@ -1,0 +1,55 @@
+## dpm共通ヘッダー用vm
+<header class="l-global-header">
+
+	<div class="l-global-header-top">
+		## ハンバーガーボタン
+		<div class="l-global-header-top__hamburger">
+			<div class="l-global-header-hamburger-btn">
+				<span></span><span></span><span></span>
+			</div>
+			<div class="l-global-header-hamburger-label">メニュー</div>
+			<!-- / -->
+		</div>
+		<!-- /.l-global-header-top__hamburger -->
+
+		## dポイントマーケットロゴ
+		<div class="l-global-header-top__logo">
+			<a href="#"><img src="$!{cdnServerUrl}/guideline/dpm/global/img/logo_dpm.png?v=$!{cache_img_dpm_global}&d=$!{categoryOfDevice}" alt="dポイントマーケット"></a>
+			<div class="l-global-header-top-logo-copy">さがして くらべて ポイント2重取り</div>
+		</div>
+		<!-- /.l-global-header-top__logo -->
+
+		## マイページリンク
+		<div class="l-global-header-top__mypage">
+			<a class="l-global-header-top-mypagelink" href="#">
+				<img src="$!{cdnServerUrl}/guideline/dpm/global/img/logo_dpm.png?v=$!{cache_img_dpm_global}&d=$!{categoryOfDevice}" alt="">
+				<div class="l-global-header-top-mypage-label">マイページ</div>
+			</a>
+		</div>
+		<!-- /.l-global-header-top__logo -->
+
+	</div>
+	<!-- /.l-global-header-top -->
+
+	<div class="l-global-header-search">
+		<div class="l-global-header-search__free">
+			ここに検索エリアのソース
+		</div>
+		<!-- /.l-global-header-search__free -->
+		<div class="l-global-header-search__category">
+			ここにカテゴリ検索のソース
+		</div>
+		<!-- /.l-global-header-search__free -->
+		<div class="l-global-header-search__service">
+			ここにサービス検索のソース
+		</div>
+		<!-- /.l-global-header-search__free -->
+	</div>
+	<!-- /.l-global-header-search -->
+
+	<div class="l-global-header-account">
+		ここにアカウント用のソース、未ログもここに書く
+	</div>
+	<!-- /.l-global-header-account -->
+
+</header>

@@ -1,0 +1,107 @@
+## 個別ページ定義ファイル
+#parse("$!{baseDirectory}/guideline/dpm/button/define/define.vm")
+
+<!DOCTYPE HTML>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>ボタン見本｜dマーケット｜NTTドコモ公式</title>
+		## viewport設定
+		#if ($isSp)
+			<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+		#else
+			<meta name="viewport" content="width=980">
+		#end
+		<meta http-equiv="content-script-type" content="text/javascript">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		## dマーケット内共通ファビコン・ホームアイコン用vm
+		#parse("$!{baseDirectory}/template/parts/parts_common_favicon.vm")
+		<link rel="stylesheet" href="$!{aplServerUrl}/guideline/dpm/global/style/style_css.cssv?v=$!{cache_css_global}&d=$!{categoryOfDevice}">
+		<link rel="stylesheet" href="$!{aplServerUrl}/guideline/dpm/button/style/style_css.cssv?v=$!{cache_css_dpm_button}&d=$!{categoryOfDevice}">
+
+	</head>
+	<body>
+
+		## ヘッダー用vm
+		#parse("$!{baseDirectory}/guideline/dpm/global/header/parts_g_header.vm")
+
+		<main class="l-mainContainer">
+
+			<!-- /.l-mainHeader -->
+
+			<section class="b-sec-main">
+
+				<header class="c-wrap-heading">
+					<h2 class="c-heading-lv1">ボタン見本</h2>
+				</header>
+				
+				<div class="b-wrap-content --mf-clmn-btn">
+					<a href="#" class="c-button-primary"><span class="c-btn-text">ショップで見る</span></a>
+					<a href="#" class="c-button-primary --mf-disable"><span class="c-btn-text">ショップで見る</span></a>
+				</div>
+
+				<div class="b-wrap-content --mf-clmn-btn">
+					<a href="#" class="c-button-primary"><span class="c-btn-text">もう一度買う</span></a>
+					<a href="#" class="c-button-primary --mf-disable"><span class="c-btn-text">もう一度買う</span></a>
+				</div>
+
+				<div class="b-wrap-content p-wrap-content-w343">
+					<a href="#" class="c-button-primary"><span class="c-btn-text">獲得・利用予定</span></a>
+				</div>
+
+				<div class="b-wrap-content p-wrap-content-w279">
+					<a href="#" class="c-button-primary"><span class="c-btn-text">確認しました</span></a>
+				</div>
+
+				<div class="b-wrap-content --mf-clmn-btn">
+					<a href="#" class="c-button-primary"><span class="c-btn-text">同意する</span></a>
+					<a href="#" class="c-button-primary --mf-disable"><span class="c-btn-text">同意する</span></a>
+				</div>
+
+				<div class="b-wrap-content">
+					<a href="#" class="c-button-primary"><span class="c-btn-text">ポイントをゲットする</span></a>
+				</div>
+
+				<div class="b-wrap-content p-wrap-content-w148">
+					<a href="#" class="c-button-small"><span class="c-btn-text">クーポンを獲得する</span></a>
+				</div>
+
+				<div class="p-wrap-content">
+					<a href="#" class="c-button-label-primary-lg"><span class="c-button-label-text">Label</span></a>
+					<a href="#" class="c-button-label-primary-md"><span class="c-button-label-text">Label</span></a>
+					<a href="#" class="c-button-label-primary-sm"><span class="c-button-label-text">Label</span></a>
+					<a href="#" class="c-button-label-primary-xsm"><span class="c-button-label-text">Label</span></a>
+				</div>
+
+				<div class="b-wrap-content">
+					<a href="#" class="c-button-secondary">
+						<span class="c-btn-icon-favarite"><img src="$!{cdnServerUrl}/test/test_og/dpm-test/img/icon_favorite.svg?v=$!{cache_img_dpm-test}&d=$!{categoryOfDevice}" alt=""></span>
+						<span class="c-btn-text">お気に入りに追加する</span>
+					</a>
+				</div>
+
+				<div class="p-wrap-content">
+					<a href="#" class="c-button-label-secondary-lg"><span class="c-button-label-text">Label</span></a>
+					<a href="#" class="c-button-label-secondary-md"><span class="c-button-label-text">Label</span></a>
+					<a href="#" class="c-button-label-secondary-sm"><span class="c-button-label-text">Label</span></a>
+					<a href="#" class="c-button-label-secondary-xsm"><span class="c-button-label-text">Label</span></a>
+				</div>
+
+			</section>
+			<!-- /.b-mainSec -->
+
+
+		</main>
+		<!-- /.l-mainCOntainer -->
+
+		## フッター
+		#parse("$!{baseDirectory}/guideline/dpm/global/footer/parts_g_footer.vm")
+
+
+	</body>
+</html>

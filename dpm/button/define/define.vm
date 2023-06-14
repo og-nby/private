@@ -1,0 +1,13 @@
+## 個別ページ定義用vm
+
+## 共通CSSキャッシュ用vm
+#parse("$!{baseDirectory}/guideline/dpm/global/define/define.vm")
+
+## CSS用キャッシュを定義
+#set($cache_css_dpm_button = "202306071710")
+
+## 画像用キャッシュを定義
+#set($cache_img_dpm_button = "202306071710")
+
+## JS用キャッシュを定義
+#set($cache_js_dpm_button  = "202306071710")

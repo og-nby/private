@@ -1,0 +1,63 @@
+## 個別ページ定義ファイル
+#parse("$!{baseDirectory}/guideline/dpm/products/define/define.vm")
+
+<!DOCTYPE HTML>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>商品リンク見本｜dマーケット｜NTTドコモ公式</title>
+		## viewport設定
+		#if ($isSp)
+			<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+		#else
+			<meta name="viewport" content="width=980">
+		#end
+		<meta http-equiv="content-script-type" content="text/javascript">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		## dマーケット内共通ファビコン・ホームアイコン用vm
+		#parse("$!{baseDirectory}/template/parts/parts_common_favicon.vm")
+		<link rel="stylesheet" href="$!{aplServerUrl}/guideline/dpm/global/style/style_css.cssv?v=$!{cache_css_global}&d=$!{categoryOfDevice}">
+		<link rel="stylesheet" href="$!{aplServerUrl}/guideline/dpm/products/style/style_css.cssv?v=$!{cache_css_dpm_products}&d=$!{categoryOfDevice}">
+
+	</head>
+	<body>
+
+		## ヘッダー用vm
+		#parse("$!{baseDirectory}/guideline/dpm/global/header/parts_g_header.vm")
+
+		<main class="l-mainContainer">
+
+			<!-- /.l-mainHeader -->
+
+			<section class="b-sec-main">
+
+				<header class="c-wrap-heading">
+					<h2 class="c-heading-lv1">商品リンク見本</h2>
+				</header>
+			
+				ここに商品リンク
+
+			</section>
+			<!-- /.b-mainSec -->
+
+			<div class="b-sec-main">
+				<div class="b-wrap-right-position">
+					<a class="b-wrap-link-sponsered__link" href="#"><span class="c-link-gray">スポンサー</span></a>
+					<a href="#"><img src="$!{cdnServerUrl}/guideline/dpm/global/img/bnr_dummy.png?v=$!{cache_img_dpm_products}&d=$!{categoryOfDevice}" alt="ダミーバナー"></a>
+				</div>
+			</div>
+			<!-- /.b-mainSec -->
+
+		</main>
+		<!-- /.l-mainCOntainer -->
+
+		## フッター
+		#parse("$!{baseDirectory}/guideline/dpm/global/footer/parts_g_footer.vm")
+
+	</body>
+</html>

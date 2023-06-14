@@ -1,0 +1,12 @@
+## ページ専用CSS
+@charset "UTF-8";
+## ブラウザキャッシュをさせるために、Last-Modifiedをセット
+$res.setHeader('Last-Modified','Tue, 27 Jun 2017 17:10:30 GMT')
+
+## ディレクトリパスをセット
+#set($cssDirPath = "guideline/dpm/button")
+
+## 個別ページ定義ファイル
+#parse("$!{baseDirectory}/$!{cssDirPath}/define/define.vm")
+
+#parse("$!{baseDirectory}/$!{cssDirPath}/style/vm/$!{categoryOfDevice}.vm")

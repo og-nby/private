@@ -1,0 +1,80 @@
+## dpm共通フッター用vm
+<footer class="l-global-footer">
+
+	<div class="l-global-footer-sns">
+		<a href="#" class="l-global-footer-sns__twitter">
+			<span class="l-global-footer-sns__icon"><img src="$!{cdnServerUrl}/guideline/dpm/global/img/icon_twitter.svg?v=$!{cache_img_dpm_global}&d=$!{categoryOfDevice}" alt=""></span>
+			<span class="l-global-footer-sns__text">Twitter</span>
+		</a>
+		<a href="#" class="l-global-footer-sns__line">
+			<span class="l-global-footer-sns__icon"><img src="$!{cdnServerUrl}/guideline/dpm/global/img/icon_line.png?v=$!{cache_img_dpm_global}&d=$!{categoryOfDevice}" alt=""></span>
+			<span class="l-global-footer-sns__text">LINE</span>
+		</a>
+	</div>
+
+	<div class="l-global-footer-services">
+		<!-- /.l-global-footer-sns -->
+		<section class="l-global-footer-services__sect">
+			<ul class="l-global-footer-services__list">
+				<li><a class="l-global-footer-services-text" class="l-global-footer-services-text" href="#">ご利用ガイド</a></li>
+				<li><a class="l-global-footer-services-text" href="#">ランキング</a></li>
+				<li><a class="l-global-footer-services-text" href="#">メルマガ設定</a></li>
+				<li><a class="l-global-footer-services-text" href="#">お知らせ</a></li>
+				<li><a class="l-global-footer-services-text" href="#">ご質問・お問い合わせ</a></li>
+				<li><a class="l-global-footer-services-text" href="#">サイトご利用にあたって</a></li>
+			</ul>
+			<!-- /.l-global-footer-services__list -->
+		</section>
+		<!-- /.l-global-footer-services__sect -->
+		<section class="l-global-footer-services__sect">
+			<h2 class="l-global-footer-services__title">ドコモのサービス一覧</h2>
+			<ul class="l-global-footer-services__list">
+				<li><a class="l-global-footer-services-text" href="#"> dショッピング</a></li>
+				<li><a class="l-global-footer-services-text" href="#">dゲーム</a></li>
+				<li><a class="l-global-footer-services-text" href="#"> dブック</a></li>
+				<li><a class="l-global-footer-services-text" href="#">d fashion</a></li>
+				<li><a class="l-global-footer-services-text" href="#"> dミュージック</a></li>
+				<li><a class="l-global-footer-services-text" href="#">dジョブ</a></li>
+				<li><a class="l-global-footer-services-text" href="#">dカーシェア</a></li>
+				<li><a class="l-global-footer-services-text" href="#">dミールキット</a></li>
+				<li><a class="l-global-footer-services-text" href="#">dアプリ＆レビュー</a></li>
+				<li><a class="l-global-footer-services-text" href="#">Lemino</a></li>
+				<li><a class="l-global-footer-services-text" href="#">dマガジン</a></li>
+				<li><a class="l-global-footer-services-text" href="#">dヒッツ</a></li>
+				<li><a class="l-global-footer-services-text" href="#">dフォト</a></li>
+				<li><a class="l-global-footer-services-text" href="#">dアニメストア</a></li>
+				<li><a class="l-global-footer-services-text" href="#">dヘルスケア</a></li>
+				<li><a class="l-global-footer-services-text" href="#">dキッズ</a></li>
+				<li><a class="l-global-footer-services-text" href="#">ドコモスポーツくじ</a></li>
+				<li><a class="l-global-footer-services-text" href="#">ドコモでんき</a></li>
+				<li><a class="l-global-footer-services-text" href="#">スゴ得コンテンツ</a></li>
+				<li><a class="l-global-footer-services-text" href="#">DAZN for docomo</a></li>
+				<li><a class="l-global-footer-services-text" href="#">ディズニープラス</a></li>
+				<li><a class="l-global-footer-services-text" href="#">ひかりTV</a></li>
+				<li><a class="l-global-footer-services-text" href="#">XR World</a></li>
+				<li><a class="l-global-footer-services-text" href="#">XR City</a></li>
+			</ul>
+			<!-- /.l-global-footer-services__list -->
+		</section>
+		<!-- /.l-global-footer-services__sect -->
+		<section class="l-global-footer-services__sect">
+			<h2 class="l-global-footer-services__title">dアカウント関連メニュー</h2>
+			<ul class="l-global-footer-services__list">
+				<li><a class="l-global-footer-services-text" href="#">会員情報登録・削除</a></li>
+				<li><a class="l-global-footer-services-text" href="#">二段階認証について</a></li>
+				<li><a class="l-global-footer-services-text" href="#">dアカウントでログイン</a></li>
+			</ul>
+			<!-- /.l-global-footer-services__list -->
+
+		</section>
+		<!-- /.l-global-footer-services__sect -->
+
+	</div>
+	<!-- /.l-global-footer-services -->
+
+	<div class="l-global-footer-copy">
+		<small class="l-global-footer-copy__text">(c)NTT DOCOMO</small>
+	</div>
+	<!-- /.l-global-footer__copy -->
+</footer>
+<!-- /.l-global-footer -->

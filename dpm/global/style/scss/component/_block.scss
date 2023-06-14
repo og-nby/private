@@ -1,0 +1,32 @@
+// ブロックカテゴリー用スタイル
+
+@use "../setting/mixins" as *;
+
+// 背景画像用キャッシュ※キャッシュ変数名はページ個別でユニークな名称を設定すること
+// $bgImgCache: '?v=$!{cache_css_dpm-test}&d=$!{categoryOfDevice}';
+
+@mixin blockStyle($deviceSelect) {
+	.b-sec-main {
+		border-top: 4px solid var(--gray200);
+		padding: var(--bs24) var(--bs16) var(--bs16);
+	}
+	
+	.b-wrap-content {
+		width: 100%;
+		&.--mf-clmn-btn {
+			display: flex;
+			gap: var(--bs8);
+			max-width: 100%;
+		}
+		&:not(:last-child) {
+			margin-bottom: var(--bs16);
+		}
+	}
+	
+	.b-wrap-content-right {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+}
+// Mixin End

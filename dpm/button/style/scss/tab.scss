@@ -1,0 +1,11 @@
+// TAB用スタイル
+// 変数
+@use "../../../global/style/scss/setting/variables" as *;
+
+// リセット・ベーススタイル
+@use "../../../global/style/scss/base" as *;
+
+// 共通スタイル読み込み
+@use "common" as *;
+
+@include deviceStyle(tab);

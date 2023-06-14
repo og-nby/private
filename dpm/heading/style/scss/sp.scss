@@ -1,0 +1,8 @@
+// SP用スタイル
+// 変数
+@use "../../../global/style/scss/setting/variables" as *;
+
+// 共通スタイル読み込み
+@use "common" as *;
+
+@include deviceStyle(sp);
