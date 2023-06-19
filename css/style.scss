@@ -12,3 +12,143 @@
     margin: 0;
 }
 
+@use "base" as *;
+
+.l-conatiner {
+    width: 100%;
+    max-width: 750px;
+    margin: auto;
+}
+
+.l-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &__logo {
+        flex: 0 0 160px;
+        order: 2;
+    }
+    &__hamburger {
+        flex: 0 0 60px;
+        order: 1
+    }
+    &__mypageLink {
+        flex: 0 0 60px;
+        order: 3;
+    }
+}
+
+.c-button-primary {
+    width: 100%;
+    color: #fff;
+    background-color: red;
+}
+
+.c-wrapper-btn-cpentry {
+    margin: 16px auto;
+    width: calc(100% - 62px);
+}
+
+.foo {
+    /* PC専用 */
+    @media screen and (min-width: 1000px) {
+        font-size: 16px;
+    }
+    /* SP専用 */
+    @media screen and (max-width: 640px) {
+        font-size: 16px;
+    }
+}
+
+.news-ticker {
+    overflow: hidden;
+    height: 30px; /* ニュースの表示領域の高さ */
+}
+
+.news-ticker ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    animation: ticker 10s linear infinite; /* スライドのアニメーション設定 */
+}
+
+.news-ticker:hover ul {
+    animation-play-state: paused; /* マウスホバー時にアニメーションを一時停止 */
+}
+
+.news-ticker ul li {
+    height: 30px; /* ニュースの行の高さ */
+    line-height: 30px; /* ニュースの行の高さに合わせて中央揃え */
+}
+
+.news-ticker ul li:first-child a {
+    pointer-events: none; /* 最初のニュースのリンクに対してイベントを無効化 */
+    color: #000; /* リンクの色をデフォルトに変更 */
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+.c-section {
+    background-color: #fff;
+    padding: 16px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.c-section__notSpace {
+    margin: 0 -16px;
+    overflow: hidden;
+}
+
+.c-slider {
+    width: 100%;
+    background-color: #ccc;
+    padding: 16px;
+    overflow-x: scroll;
+}
+
+.c-list-products {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+}
+
+.c-list-products__slide{
+    flex: 0 0 76px;
+    @media screen and (min-width: 641px) {
+        flex: 0 0 119px;
+    }
+}
+.c-products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 4px;
+    color: #383838;
+    text-decoration: none;
+    aspect-ratio: 76 / 112;
+    text-align: center;
+    padding: 8px;
+    width: auto;
+    // height: 112px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 13px;
+        line-height: calc(16 /13);
+        margin-bottom: 4px;
+    }
+    &__thumbs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1 / 1;
+    }
+}
