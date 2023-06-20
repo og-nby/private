@@ -1,0 +1,84 @@
+// ラベル用スタイル
+@use "../setting/variables" as *;
+@use "../setting/mixins" as *;
+
+%c-label-primary {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--primary);
+	color: #fff;
+	font-weight: var(--bold-600);
+	font-size: var(--medium-fontSize);
+}
+.c-label-primary-lg {
+	@extend %c-label-primary;
+	height: 46px;
+	padding: 14px 24px;
+	border-radius: var(--radius-medium);
+}
+.c-label-primary-md {
+	@extend %c-label-primary;
+	height: 36px;
+	padding: 8px 16px;
+	border-radius: var(--radius-medium);
+}
+.c-label-primary-sm {
+	@extend %c-label-primary;
+	height: 28px;
+	padding: 4px 8px;
+	border-radius: 6px;
+}
+.c-label-primary-xsm {
+	@extend %c-label-primary;
+	height: 28px;
+	padding: 4px 8px;
+	border-radius: 30px;
+}
+
+%c-label-secondary {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	color:  var(--gray800);
+	border: 1px solid var(--gray400);
+	font-weight: var(--bold-600);
+	font-size: var(--medium-fontSize);
+}
+.c-label-secondary-lg {
+	@extend %c-label-secondary;
+	height: 46px;
+	padding: 14px 24px;
+	border-radius: var(--radius-medium);
+}
+.c-label-secondary-md {
+	@extend %c-label-secondary;
+	height: 36px;
+	padding: 8px 16px;
+	border-radius: var(--radius-medium);
+}
+.c-label-secondary-sm {
+	@extend %c-label-secondary;
+	height: 28px;
+	padding: 4px 8px;
+	border-radius: 6px;
+}
+.c-label-secondary-xsm {
+	@extend %c-label-secondary;
+	height: 28px;
+	padding: 4px 8px;
+	border-radius: 30px;
+}
+
+.c-label-text {
+	text-align: center;
+	@include lineHeightCrop(1.29);
+	line-height: var(1.29);
+	.c-label-primary-md &,
+	.c-label-primary-sm &,
+	.c-label-primary-xsm & {
+		@include lineHeightCrop(1.43);
+		line-height: var(1.43);
+	}
+}

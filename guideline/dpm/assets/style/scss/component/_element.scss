@@ -1,0 +1,65 @@
+// エレメント用スタイル
+
+@use "../setting/variables" as *;
+@use "../setting/mixins" as *;
+
+// 背景画像用キャッシュ※キャッシュ変数名はページ個別でユニークな名称を設定すること
+$bgImgCache: '?v=$!{cache_css_dpm-assets}&d=$!{categoryOfDevice}';
+
+.c-text {
+	font-size: var(--medium-fontSize);
+	line-height: var(--default-lineHeight);
+	@include lineHeightCrop(1.5);
+	// リンク
+	&-link {
+		color: var(--textLink);
+		&:hover,
+		&:active,
+		&:visited {
+			color: var(--textLink);
+		}
+		// 矢印付
+		&-arrow {
+			color: var(--textLink);
+			@include lineHeightCrop(1.5);
+			display: flex;
+			align-items: center;
+			height: 18px;
+			padding-right: 14px;
+			background: url(#{$cdn}/guideline/dpm/assets/img/bg_text_link_arrow.png#{$bgImgCache}) no-repeat center right;
+			background-size: auto 12px;
+			font-size: var(--small-fontSize);
+			&:hover,
+			&:active,
+			&:visited {
+				color: var(--textLink);
+			}
+	
+		}
+	}
+}
+
+.c-button-sponsored {
+	display: flex;
+	align-items: center;
+	height: 18px;
+	width: 65px;
+	gap: 3px;
+	cursor: pointer;
+	&__text {
+		color: var(--gray400);
+		font-size: 10px;
+		line-height: 1.8;
+		@include lineHeightCrop(1.8);
+		// background: url(#{cdn}/guidline/dpm/assets/img/icon_sponsored.png) no-repeat center center;
+		// background-size: 12px auto;
+		// padding-right: 14px;
+	}
+	&__icon {
+		flex: 0 0 12px;
+		aspect-ratio: 12 / 12;
+	}
+}
+.c-wrapper-bnr-sponsered {
+	margin-top: 3px;
+}

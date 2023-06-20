@@ -1,0 +1,17 @@
+// 変数
+// 演算用mathモジュール
+@use "sass:math";
+
+// 共通変数 start ****************************************************
+
+// サーバードメイン
+$cdn: '$!{cdnServerUrl}';
+
+// 共通背景画像
+$common_img_dir: '$!{cdnServerUrl}/template/common/img/';
+
+// SPスプライト画像
+$sprite_img: '$!{cdnServerUrl}/template/common/img/sprite_sp.png';
+
+// 共通変数 end ****************************************************
+

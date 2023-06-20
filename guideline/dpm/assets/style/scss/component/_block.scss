@@ -1,0 +1,29 @@
+// ブロックカテゴリー用スタイル
+
+@use "../setting/variables" as *;
+@use "../setting/mixins" as *;
+
+// 背景画像用キャッシュ※キャッシュ変数名はページ個別でユニークな名称を設定すること
+// $bgImgCache: '?v=$!{cache_css_dpm-test}&d=$!{categoryOfDevice}';
+
+.c-wrapper-top {
+	padding-bottom: 6px;
+}
+
+.c-section {
+	padding: var(--bs16);
+	&:not(:last-child) {
+		border-bottom: 4px solid var(--gray200);
+	}
+	// スライダーやナビゲーション設置用に左右の余白を消す
+	&__horizontal-padding-off {
+		margin: 0 -16px;
+		overflow: hidden;
+	}
+	&__bottom {
+		margin: 20px 0 4px;
+	}
+}
+
+
+// Mixin End

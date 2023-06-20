@@ -1,0 +1,54 @@
+## dpm共通ヘッダー用vm
+<header class="l-header">
+
+	<div class="l-header__top">
+		## dポイントマーケットロゴ
+		<h1 class="l-hader-logo">
+			<a href="#"><img src="$!{cdnServerUrl}/guideline/dpm/assets/img/logo_dpm.png?v=$!{cache_img_dpm_assets}&d=$!{categoryOfDevice}" alt=" dポイントマーケット さがして くらべて ポイント2重取り"></a>
+		</h1>
+		<!-- /.l-hader-logo -->
+
+		<a class="l-header-mypage" href="#">
+			<img class="l-header-mypage__icon" src="$!{cdnServerUrl}/guideline/dpm/assets/img/icon_header_mypage.png?v=$!{cache_img_dpm_assets}&d=$!{categoryOfDevice}" alt="">
+			<span class="l-header-mypage__label">マイページ</span>
+		</a>
+		<!-- /.l-header-mypage__mypage -->
+
+	</div>
+	<!-- /.l-header__top -->
+
+	<div class="l-header__search">
+		<div class="l-header-search-keyword">
+			<form action="" id="searchForm">
+				<input class="l-header-search-keyword__input" type="text" id="searchInput" placeholder="何をお探しですか？">
+			</form>
+		</div>
+		<div class="l-header-search">
+			<div class="l-header-search__category" data-search="searchCategory">
+				カテゴリーを探す
+			</div>
+			<div id="searchCategory" class="l-header-search-menu-list">
+				<ul>
+					<li><a href=""></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="l-header-search">
+			<div class="l-header-search__service" data-search="searchService">
+				サービスを探す
+			</div>
+			<div id="searchService" class="l-header-search-menu-list">
+				<ul>
+					<li><a href=""></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /.l-header__search -->
+
+	<div class="l-header__account">
+		ここにアカウント
+	</div>
+	<!-- /.l-header__account -->
+
+</header>

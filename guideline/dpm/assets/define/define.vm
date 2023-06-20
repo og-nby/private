@@ -1,0 +1,10 @@
+## 共通CSSキャッシュ用vm
+
+## CSS用キャッシュを定義
+#set($cache_css_dpm_assets = "202306201042")
+
+## 画像用キャッシュを定義
+#set($cache_img_dpm_assets = "202306152143")
+
+## JS用キャッシュを定義
+#set($cache_js_dpm_assets  = "202306152132")

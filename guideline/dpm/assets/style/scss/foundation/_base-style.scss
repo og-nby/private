@@ -1,0 +1,23 @@
+// dpmベーススタイル
+
+html {
+	font-family: 'Hiragino Sans','Meiryo','Hiragino Kaku Gothic ProN',sans-serif;
+	font-size: var(--medium-fontSize);
+	color: var(--gray800);
+	line-height: var(--default-lineHeight);
+}
+
+body {
+	background-color:  #F5F5F5;
+}
+
+a,a:hover,a:visited,a:link {
+	text-decoration: none;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+	vertical-align: baseline;
+}

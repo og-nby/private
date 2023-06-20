@@ -1,0 +1,72 @@
+// ボタン用スタイル
+@use "../setting/variables" as *;
+@use "../setting/mixins" as *;
+
+%c-btn-default {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 46px;
+	border-radius: var(--radius-medium);
+	font-weight: var(--bold-600);
+	font-size: var(--medium-fontSize);
+	letter-spacing: .01em;
+	cursor: pointer;
+	padding: 14px;
+}
+%c-btn-small {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 34px;
+	border-radius: var(--radius-low);
+	font-weight: var(--bold-600);
+	font-size: var(--small-fontSize);
+	letter-spacing: .01em;
+	cursor: pointer;
+	padding: 8px;
+}
+
+.c-button-primary {
+	@extend %c-btn-default;
+	background-color: var(--primary);
+	color: #fff;
+	&.--disable {
+		background-color: var(--gray400);
+		cursor: default;
+	}
+}
+.c-button-secondary {
+	@extend %c-btn-default;
+	background-color: #fff;
+	color:  var(--gray800);
+	border: 1px solid var(--gray400);
+	cursor: pointer;
+}
+
+.c-button-small {
+	@extend %c-btn-small;
+	background-color: var(--primary);
+	color: #fff;
+	&.--disable {
+		background-color: var(--gray400);
+		cursor: default;
+	}
+}
+
+.c-btn-text {
+	@include lineHeightCrop(1.29);
+	line-height: 1.29;
+	text-align: center;
+	.c-button-small & {
+		@include lineHeightCrop(1.5);
+		line-height: var(--default-lineHeight);
+		font-size: var(--small-fontSize);
+	}
+}
+
+.c-btn-icon-favarite {
+	margin-right: var(--bs8);
+}

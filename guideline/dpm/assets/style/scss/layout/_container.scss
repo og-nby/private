@@ -1,0 +1,15 @@
+// レイアウト用スタイル
+@use "../setting/variables" as *;
+@use "../setting/mixins" as *;
+
+.l-root {
+	width: 100%;
+	max-width: 750px;
+	margin: auto;
+}
+
+.l-wrapper {
+	background-color: #fff;
+	position: relative;
+}
+

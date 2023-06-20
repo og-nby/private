@@ -1,0 +1,488 @@
+## 個別ページ定義ファイル
+#parse("$!{baseDirectory}/guideline/dpm/top/define/define.vm")
+
+<!DOCTYPE HTML>
+<html lang="ja">
+	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+		<meta charset="UTF-8">
+		<title>タイトル｜dマーケット｜NTTドコモ公式</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="content-script-type" content="text/javascript">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<meta property="og:title" content="タイトル｜dマーケット｜NTTドコモ公式">
+		<meta property="og:description" content="ここにディスクリプション">
+		## <meta property="og:image" content="$!{cdnServerUrl}/★dirPath★/img/ogp_*folderName*.png">
+		## <meta property="og:url" content="$!{portalServerUrl}/★dirPath★/index.html">
+		<meta property="og:type" content="website">
+		<meta property="fb:app_id" content="197164534262354">
+		<meta name="twitter:card" content="summary_large_image">
+		## <link rel="canonical" href="$!{portalServerUrl}/★dirPath★/index.html">
+		## dマーケット内共通ファビコン・ホームアイコン用vm
+		#parse("$!{baseDirectory}/template/parts/parts_common_favicon.vm")
+		<link rel="stylesheet" href="$!{aplServerUrl}/guideline/dpm/assets/style/style_css.cssv?v=$!{cache_css_dpm_assets}&d=$!{categoryOfDevice}">
+		<link rel="stylesheet" href="$!{aplServerUrl}/guideline/dpm/top/style/style_css.cssv?v=$!{cache_css_dpm_top}&d=$!{categoryOfDevice}">
+
+	</head>
+	<body onunload="">
+
+		<div class="l-root">
+
+			## ヘッダー用vm
+			#parse("$!{baseDirectory}/guideline/dpm/assets/header/parts_g_header.vm")
+
+			<main class="l-wrapper">
+				## 将来的にここにPCTABでサイドナビが入ることを想定↓
+				## #parse("$!{baseDirectory}/guideline/dpm/assets/navigation/parts_nav_pctab.vm")
+				## 将来的にここにPCTABでサイドナビが入ることを想定↑
+				<div class="l-container">
+
+				<div class="c-slider">
+					<ul class="c-list-products">
+						<li class="c-list-products__slide">
+							<a class="c-products" href="#">
+								<div class="c-products__title">もう一度買う</div>
+								<figure class="c-products__thumb"><img src="./img/dummy.png" alt=""></figure>
+							</a>
+						</li>
+						<li class="c-list-products__slide">
+							<a class="c-products" href="#">
+								<div class="c-products__title">もう一度買う</div>
+								<figure class="c-products__thumb"><img src="./img/dummy.png" alt=""></figure>
+							</a>
+						</li>
+						<li class="c-list-products__slide">
+							<a class="c-products" href="#">
+								<div class="c-products__title">もう一度買う</div>
+								<figure class="c-products__thumb"><img src="./img/dummy.png" alt=""></figure>
+							</a>
+						</li>
+						<li class="c-list-products__slide">
+							<a class="c-products" href="#">
+								<div class="c-products__title">もう一度買う</div>
+								<figure class="c-products__thumb"><img src="./img/dummy.png" alt=""></figure>
+							</a>
+						</li>
+						<li class="c-list-products__slide">
+							<a class="c-products" href="#">
+								<div class="c-products__title">もう一度買う</div>
+								<figure class="c-products__thumb"><img src="./img/dummy.png" alt=""></figure>
+							</a>
+						</li>
+						<li class="c-list-products__slide">
+							<a class="c-products" href="#">
+								<div class="c-products__title">もう一度買う</div>
+								<figure class="c-products__thumb"><img src="./img/dummy.png" alt=""></figure>
+							</a>
+						</li>
+						<li class="c-list-products__slide">
+							<a class="c-products" href="#">
+								<div class="c-products__title">もう一度買う</div>
+								<figure class="c-products__thumb"><img src="./img/dummy.png" alt=""></figure>
+							</a>
+						</li>
+					</ul>
+					<!-- /.c-list-products -->
+				</div>
+				<!-- /.c-slider -->
+					<!-- /.c-slider -->
+
+					## あなたにおすすめのタイムセール
+					<section class="c-section">
+						<header class="c-hedding-lv1">
+							<h2 class="c-hedding-lv1__title-text">あなたにおすすめのタイムセール</h2>
+						</header>
+						<!-- /.c-hedding-lv1 -->
+
+						<div class="c-section__bottom">
+							<div class="u-position-right-flex">
+								<a href="#" class="c-text-link-arrow">すべての超特価商品を見る</a>
+								<!-- /.c-text-link-arrow -->
+							</div>
+						</div>
+						<!-- /.c-section__bottom -->
+
+					</section>
+					<!-- /.c-section -->
+
+					## 最近チェックした商品
+					<section class="c-section">
+						<header class="c-hedding-lv1">
+							<h2 class="c-hedding-lv1__title-text">最近チェックした商品</h2>
+						</header>
+
+
+						<div class="c-section__bottom">
+							<div class="u-position-right-flex">
+								<a href="#" class="c-text-link-arrow">すべての閲覧履歴を見る</a>
+								<!-- /.c-text-link-arrow -->
+							</div>
+						</div>
+						<!-- /.c-section__bottom -->
+
+					</section>
+					<!-- /.c-section -->
+
+					## タイムセール
+					<section class="c-section">
+						<header class="c-hedding-lv1">
+							<h2 class="c-hedding-lv1__title-text">タイムセール</h2>
+						</header>
+
+
+						<div class="c-section__bottom">
+							<div class="u-position-right-flex">
+								<a href="#" class="c-text-link-arrow">すべてのタイムセールを見る</a>
+								<!-- /.c-text-link-arrow -->
+							</div>
+						</div>
+						<!-- /.c-section__bottom -->
+
+
+					</section>
+					<!-- /.c-section -->
+
+					## あなたにおすすめの人気商品
+					<section class="c-section">
+						<header class="c-hedding-lv1">
+							<h2 class="c-hedding-lv1__title-text">あなたにおすすめの人気商品</h2>
+						</header>
+
+
+						<div class="c-section__bottom">
+							<div class="u-position-right-flex">
+								<a href="#" class="c-text-link-arrow">すべての商品を見る</a>
+								<!-- /.c-text-link-arrow -->
+							</div>
+						</div>
+						<!-- /.c-section__bottom -->
+
+					</section>
+
+					## ポイント2重取りのおすすめ商品
+					<section class="c-section">
+						<header class="c-hedding-lv1">
+							<h2 class="c-hedding-lv1__title-text">ポイント2重取りのおすすめ商品</h2>
+						</header>
+
+						<div class="c-section__horizontal-padding-off">
+							<div class="c-slider">
+								ここにスライダー
+							</div>
+							<!-- /.c-slider -->
+						</div>
+						<!-- /.c-section__horizontal-padding-off -->
+
+						<div class="c-section__bottom">
+							<div class="u-position-right-flex">
+								<a href="#" class="c-text-link-arrow">すべての商品を見る</a>
+								<!-- /.c-text-link-arrow -->
+							</div>
+						</div>
+						<!-- /.c-section__bottom -->
+
+					</section>
+
+					## 話題の商品 or あなたが興味ありそうな商品
+					<section class="c-section">
+						<header class="c-hedding-lv1">
+							<h2 class="c-hedding-lv1__title-text">話題の商品 or あなたが興味ありそうな商品</h2>
+						</header>
+
+						<div class="c-section__bottom">
+							<div class="u-position-right-flex">
+								<a href="#" class="c-text-link-arrow">すべての商品を見る</a>
+								<!-- /.c-text-link-arrow -->
+							</div>
+						</div>
+						<!-- /.c-section__bottom -->
+
+					</section>
+
+					## 人気急上昇の商品
+					<section class="c-section">
+						<header class="c-hedding-lv1">
+							<h2 class="c-hedding-lv1__title-text">人気急上昇の商品</h2>
+						</header>
+
+						<div class="c-section__bottom">
+							<div class="u-position-right-flex">
+								<a href="#" class="c-text-link-arrow">すべての商品を見る</a>
+								<!-- /.c-text-link-arrow -->
+							</div>
+						</div>
+						<!-- /.c-section__bottom -->
+
+					</section>
+					<!-- /.c-section -->
+
+					## おすすめのお試し商品
+					<section class="c-section">
+						<header class="c-hedding-lv1">
+							<h2 class="c-hedding-lv1__title-text">おすすめのお試し商品</h2>
+						</header>
+
+						<div class="c-section__bottom">
+							<div class="u-position-right-flex">
+								<a href="#" class="c-text-link-arrow">すべてのお試し商品を見る</a>
+								<!-- /.c-text-link-arrow -->
+							</div>
+						</div>
+						<!-- /.c-section__bottom -->
+
+					</section>
+					<!-- /.c-section -->
+
+					## 今お得なショップのキャンペーン（特典プログラム）
+					<section class="c-section">
+						<header class="c-hedding-lv1">
+							<h2 class="c-hedding-lv1__title-text">今お得なショップのキャンペーン（特典プログラム）</h2>
+						</header>
+
+						<div class="c-section__bottom">
+							<div class="u-position-right-flex">
+								<a href="#" class="c-text-link-arrow">すべての特典プログラムを見る</a>
+								<!-- /.c-text-link-arrow -->
+							</div>
+						</div>
+						<!-- /.c-section__bottom -->
+
+					</section>
+					<!-- /.c-section -->
+
+					## 新規購入時に特典がある商品（特典プログラム）
+					<section class="c-section">
+						<header class="c-hedding-lv1">
+							<h2 class="c-hedding-lv1__title-text">新規購入時に特典がある商品（特典プログラム）</h2>
+						</header>
+
+						<div class="c-section__bottom">
+							<div class="u-position-right-flex">
+								<a href="#" class="c-text-link-arrow">すべての特典プログラムを見る</a>
+								<!-- /.c-text-link-arrow -->
+							</div>
+						</div>
+						<!-- /.c-section__bottom -->
+
+					</section>
+					<!-- /.c-section -->
+
+					## あなたにおすすめのショップ
+					<section class="c-section">
+						<header class="c-hedding-lv1">
+							<h2 class="c-hedding-lv1__title-text">あなたにおすすめのショップ</h2>
+						</header>
+
+						<div class="c-section__bottom">
+							<div class="u-position-right-flex">
+								<a href="#" class="c-text-link-arrow">すべてのショップを見る</a>
+								<!-- /.c-text-link-arrow -->
+							</div>
+						</div>
+						<!-- /.c-section__bottom -->
+
+					</section>
+					<!-- /.c-section -->
+
+
+					## 特集記事
+					<section class="c-section">
+						<header class="c-hedding-lv1">
+							<h2 class="c-hedding-lv1__title-text">特集記事</h2>
+						</header>
+
+						<div class="c-section__horizontal-padding-off">
+							<nav class="c-navigation-tabs">
+								ここにナビゲーション
+							</nav>
+							<!-- /.c-navigation-tabs -->
+						</div>
+						<!-- /.c-section__horizontal-padding-off -->
+
+						<div class="c-section__bottom">
+							<div class="u-position-right-flex">
+								<a href="#" class="c-text-link-arrow">すべての特集記事を見る</a>
+								<!-- /.c-text-link-arrow -->
+							</div>
+						</div>
+						<!-- /.c-section__bottom -->
+
+					</section>
+					<!-- /.c-section -->
+
+					## 注目のサブスクコンテンツ
+					<section class="c-section">
+						<header class="c-hedding-lv1">
+							<h2 class="c-hedding-lv1__title-text">注目のサブスクコンテンツ</h2>
+						</header>
+						
+						<div class="c-section__horizontal-padding-off">
+							<nav class="c-navigation-tabs">
+								ここにナビゲーション
+							</nav>
+							<!-- /.c-navigation-tabs -->
+						</div>
+						<!-- /.c-section__horizontal-padding-off -->
+
+						<div class="c-section__bottom">
+							<div class="u-position-right-flex">
+								<a href="#" class="c-text-link-arrow">すべてのサブスクコンテンツを見る</a>
+								<!-- /.c-text-link-arrow -->
+							</div>
+						</div>
+						<!-- /.c-section__bottom -->
+
+					</section>
+					<!-- /.c-section -->
+
+					## おすすめキャンペーン
+					<section class="c-section">
+						<header class="c-hedding-lv1">
+							<h2 class="c-hedding-lv1__title-text">おすすめキャンペーン</h2>
+						</header>
+
+						<div class="c-section__bottom">
+							<div class="u-position-right-flex">
+								<a href="#" class="c-text-link-arrow">すべてのキャンペーンを見る</a>
+								<!-- /.c-text-link-arrow -->
+							</div>
+						</div>
+						<!-- /.c-section__bottom -->
+
+					</section>
+					<!-- /.c-section -->
+
+					## サービスを利用してポイントゲット
+					<section class="c-section">
+						<header class="c-hedding-lv1">
+							<h2 class="c-hedding-lv1__title-text">サービスを利用してポイントゲット</h2>
+						</header>
+
+						<div class="c-section__bottom">
+							<div class="u-position-right-flex">
+								<a href="#" class="c-text-link-arrow">すべての閲覧履歴を見る</a>
+								<!-- /.c-text-link-arrow -->
+							</div>
+						</div>
+						<!-- /.c-section__bottom -->
+
+					</section>
+					<!-- /.c-section -->
+
+					## その他キャンペーン
+					<section class="c-section">
+						<header class="c-hedding-lv1">
+							<h2 class="c-hedding-lv1__title-text">その他キャンペーン</h2>
+						</header>
+
+						<div class="c-section__bottom">
+							<div class="u-position-right-flex">
+								<a href="#" class="c-text-link-arrow">すべてのキャンペーンを見る</a>
+								<!-- /.c-text-link-arrow -->
+							</div>
+						</div>
+						<!-- /.c-section__bottom -->
+
+					</section>
+					<!-- /.c-section -->
+
+					## スポンサーバナー
+					<div class="c-section">
+						<div class="u-position-right-flex">
+							<div class="c-button-sponsored">
+								<span class="c-button-sponsored__text">スポンサー</span>
+								<span class="c-button-sponsored__icon"><img src="$!{cdnServerUrl}/guideline/dpm/assets/img/icon_sponsored.png?v=$!{cache_img_dpm_top}&d=$!{categoryOfDevice}" alt=""></span>
+							</div>
+						</div>
+						<!-- /.u-position-right-flex -->
+						<div class="c-wrapper-bnr-sponsered">
+							<a href="#"><img src="$!{cdnServerUrl}/guideline/dpm/assets/img/bnr_dummy.png?v=$!{cache_img_dpm_top}&d=$!{categoryOfDevice}" alt=""></a>
+						</div>
+						<!-- /.c-wrapper-bnr-sponsered -->
+					</div>
+					<!-- /.c-section -->
+
+					## カテゴリーベースに入れた商品（広告枠）
+					<section class="c-section">
+						<header class="c-hedding-lv1">
+							<h2 class="c-hedding-lv1__title-text">カテゴリーベースに入れた商品（広告枠）</h2>
+						</header>
+
+						<div class="c-section__bottom">
+							<div class="u-position-right-flex">
+								<a href="#" class="c-text-link-arrow">すべてのショップを見る</a>
+								<!-- /.c-text-link-arrow -->
+							</div>
+						</div>
+						<!-- /.c-section__bottom -->
+
+					</section>
+					<!-- /.c-section -->
+
+					## スポンサーバナー
+					<div class="c-section">
+						<div class="u-position-right-flex">
+							<div class="c-button-sponsored">
+								<span class="c-button-sponsored__text">スポンサー</span>
+								<span class="c-button-sponsored__icon"><img src="$!{cdnServerUrl}/guideline/dpm/assets/img/icon_sponsored.png?v=$!{cache_img_dpm_top}&d=$!{categoryOfDevice}" alt=""></span>
+							</div>
+						</div>
+						<!-- /.u-position-right-flex -->
+						<div class="c-wrapper-bnr-sponsered">
+							<a href="#"><img src="$!{cdnServerUrl}/guideline/dpm/assets/img/bnr_dummy.png?v=$!{cache_img_dpm_top}&d=$!{categoryOfDevice}" alt=""></a>
+						</div>
+						<!-- /.c-wrapper-bnr-sponsered -->
+					</div>
+					<!-- /.c-section -->
+
+					## スポンサーバナー
+					<div class="c-section">
+						<div class="u-position-right-flex">
+							<div class="c-button-sponsored">
+								<span class="c-button-sponsored__text">スポンサー</span>
+								<span class="c-button-sponsored__icon"><img src="$!{cdnServerUrl}/guideline/dpm/assets/img/icon_sponsored.png?v=$!{cache_img_dpm_top}&d=$!{categoryOfDevice}" alt=""></span>
+							</div>
+						</div>
+						<!-- /.u-position-right-flex -->
+						<div class="c-wrapper-bnr-sponsered">
+							<a href="#"><img src="$!{cdnServerUrl}/guideline/dpm/assets/img/bnr_dummy.png?v=$!{cache_img_dpm_top}&d=$!{categoryOfDevice}" alt=""></a>
+						</div>
+						<!-- /.c-wrapper-bnr-sponsered -->
+					</div>
+					<!-- /.c-section -->
+
+					## スポンサーバナー
+					<div class="c-section">
+						<div class="u-position-right-flex">
+							<div class="c-button-sponsored">
+								<span class="c-button-sponsored__text">スポンサー</span>
+								<span class="c-button-sponsored__icon"><img src="$!{cdnServerUrl}/guideline/dpm/assets/img/icon_sponsored.png?v=$!{cache_img_dpm_top}&d=$!{categoryOfDevice}" alt=""></span>
+							</div>
+						</div>
+						<!-- /.u-position-right-flex -->
+						<div class="c-wrapper-bnr-sponsered">
+							<a href="#"><img src="$!{cdnServerUrl}/guideline/dpm/assets/img/bnr_dummy.png?v=$!{cache_img_dpm_top}&d=$!{categoryOfDevice}" alt=""></a>
+						</div>
+						<!-- /.c-wrapper-bnr-sponsered -->
+					</div>
+					<!-- /.c-section -->
+
+				</div>
+				<!-- /.l-container -->
+			</main>
+			<!-- /.l-wrapper -->
+	
+	
+			## フッター
+			#parse("$!{baseDirectory}/guideline/dpm/assets/footer/parts_g_footer.vm")
+
+
+		</div>
+		<!-- /.l-root-container -->
+
+	</body>
+</html>
