@@ -1,1 +1,253 @@
-.foo{padding:0}.foo:after{content:">"}.test{width:100px;margin:0}
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #ebebeb;
+}
+
+img {
+  vertical-align: baseline;
+  width: 100%;
+}
+
+.l-conatiner {
+  width: 100%;
+  max-width: 750px;
+  margin: auto;
+}
+
+.l-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.l-header__logo {
+  flex: 0 0 160px;
+  order: 2;
+}
+.l-header__hamburger {
+  flex: 0 0 60px;
+  order: 1;
+}
+.l-header__mypageLink {
+  flex: 0 0 60px;
+  order: 3;
+}
+
+.c-button-primary {
+  width: 100%;
+  color: #fff;
+  background-color: red;
+}
+
+.c-wrapper-btn-cpentry {
+  margin: 16px auto;
+  width: calc(100% - 62px);
+}
+
+.foo {
+  /* PC専用 */
+  /* SP専用 */
+}
+@media screen and (min-width: 1000px) {
+  .foo {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .foo {
+    font-size: 16px;
+  }
+}
+
+.news-ticker {
+  overflow: hidden;
+  height: 30px; /* ニュースの表示領域の高さ */
+}
+
+.news-ticker ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  animation: ticker 10s linear infinite; /* スライドのアニメーション設定 */
+}
+
+.news-ticker:hover ul {
+  animation-play-state: paused; /* マウスホバー時にアニメーションを一時停止 */
+}
+
+.news-ticker ul li {
+  height: 30px; /* ニュースの行の高さ */
+  line-height: 30px; /* ニュースの行の高さに合わせて中央揃え */
+}
+
+.news-ticker ul li:first-child a {
+  pointer-events: none; /* 最初のニュースのリンクに対してイベントを無効化 */
+  color: #000; /* リンクの色をデフォルトに変更 */
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+.c-section {
+  background-color: #fff;
+  padding: 16px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.c-section__notSpace {
+  margin: 0 -16px;
+  overflow: hidden;
+}
+
+.c-slider {
+  width: 100%;
+  background-color: #ccc;
+  padding: 16px;
+  overflow-x: scroll;
+}
+
+.c-list-products {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+}
+
+.c-list-products__slide {
+  flex: 0 0 76px;
+}
+@media screen and (min-width: 641px) {
+  .c-list-products__slide {
+    flex: 0 0 119px;
+  }
+}
+
+.c-products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 4px;
+  color: #383838;
+  text-decoration: none;
+  aspect-ratio: 76/112;
+  text-align: center;
+  padding: 8px;
+  width: auto;
+}
+.c-products__title {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.2307692308;
+  margin-bottom: 4px;
+}
+.c-products__thumbs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+}
+
+.c-section__header {
+  background-color: #fff;
+}
+.c-section__header.sh {
+  background-color: aqua;
+  font-size: 16px;
+}
+.c-section__header.fa {
+  background-color: orange;
+  font-size: 16px;
+}
+
+.l-hader-logo {
+  max-width: 137px;
+}
+@media screen and (max-width: 999px) {
+  .l-hader-logo {
+    max-width: 164px;
+  }
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel__track-container {
+  width: 100%;
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox用 */
+}
+
+.carousel__track-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari用 */
+}
+
+.carousel__track {
+  display: flex;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel__slide {
+  flex: none;
+  scroll-snap-align: start;
+}
+
+.carousel__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+
+.c-tabs {
+  width: 100%;
+  height: 28px;
+  display: flex;
+  background-color: #fff;
+}
+.c-tabs__item {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #B0B0B0;
+  height: 20px;
+}
+.c-tabs__item:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #F0F0F0;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+}
+.c-tabs__item.is-tabs-active {
+  color: #383838;
+}
+.c-tabs__item.is-tabs-active:after {
+  content: "";
+  height: 3px;
+  background-color: #CF0F30;
+}
