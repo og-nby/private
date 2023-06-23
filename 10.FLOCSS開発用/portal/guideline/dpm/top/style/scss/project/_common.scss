@@ -1,0 +1,14 @@
+// 個別ページ用スタイル
+
+@use "../setting/variables" as *;
+@use "../setting/mixins" as *;
+
+$bgImgCache: '?v=$!{ccache_css_dpm_top}&d=$!{categoryOfDevice}';
+
+
+.foo {
+	font-size: var(--medium-fontSize);
+	line-height: var(--default-lineHeight);
+	@include lineHeightCrop(1.5);
+	background: url(#{$common_img_dir}/img/bg_foo.png#{$bgImgCache}) no-repeat top left;
+}

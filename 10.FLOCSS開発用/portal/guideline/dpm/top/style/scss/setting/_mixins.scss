@@ -1,0 +1,18 @@
+// Mixin管理用
+// line-heightの上下の余白を打ち消す
+@mixin lineHeightCrop($line-height) {
+	&::before {
+		display: block;
+		width: 0;
+		height: 0;
+		margin-top: calc((1 - #{$line-height}) * .5em);
+		content: "";
+	}
+	&::after {
+		display: block;
+		width: 0;
+		height: 0;
+		margin-bottom: calc((1 - #{$line-height}) * .5em);
+		content: "";
+	}
+}

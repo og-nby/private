@@ -1,0 +1,103 @@
+// dpm共通ヘッダー
+@use "../setting/variables" as *;
+@use "../setting/mixins" as *;
+
+.l-header {
+	width: 100%;
+	background-color: #fff;
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 64px;
+		padding: 8px 8px 12px;
+		position: relative;
+	}
+	&__search {
+		display: flex;
+		gap: 8px;
+		width: 100%;
+		margin-bottom: 8px;
+		padding: 0 16px;
+	}
+	&__account {
+		display: flex;
+		background-color: var(--bg100);
+		padding: var(--bs8) var(--bs16);
+	}
+}
+.l-hader-logo {
+	max-width: 137px;
+	@include notSp() {
+		max-width: 164px;
+	}
+}
+.l-hader-copy {
+	text-align: center;
+	font-size: 8px;
+	@media screen and(min-width: 641px) {
+		font-size: 10px;
+	}
+	font-weight: var(--bold-700);
+	color: var(--gray800);
+	line-height: 1;
+	@include lineHeightCrop(1);
+	margin-top: 3px;
+}
+
+.l-header-mypage {
+	width: 50px;
+	height: 40px;
+	position: absolute;
+	top: 12px;
+	right: 8px;
+	display: block;
+	&__icon {
+		width: auto;
+		height: 25px;
+		margin: auto;
+	}
+	&__label {
+		margin-top: 3px;
+		font-size: 10px;
+		line-height: 1.2;
+		@include lineHeightCrop(1.2);
+		text-align: center;
+	}
+}
+
+.l-header-search-keyword {
+	flex: 1;
+	width: 100%;
+	height: 48px;
+}
+%header-search {
+	text-align: center;
+	padding: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 9px;
+	font-weight: 600;
+	aspect-ratio: 5/4;
+}
+.l-header-search {
+	flex: 0 0 60px;
+	&__category {
+		@extend %header-search;
+		border: 1px solid var(--gray800);
+		color: var(--gray800);
+	}
+	&__service {
+		@extend %header-search;
+		border: 1px solid var(--primary);
+		color: var(--primary);
+	}
+}
+
+
+.l-header-search-menu-list {
+	display: none;
+	&.is-search-menu-list-open {
+		display: block;
+	}
+}

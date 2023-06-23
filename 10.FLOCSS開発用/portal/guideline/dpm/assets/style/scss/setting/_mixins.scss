@@ -1,0 +1,61 @@
+// Mixin管理用
+// line-heightの上下の余白を打ち消す
+@mixin lineHeightCrop($line-height) {
+	&::before {
+		display: block;
+		width: 0;
+		height: 0;
+		margin-top: calc((1 - #{$line-height}) * .5em);
+		content: "";
+	}
+	&::after {
+		display: block;
+		width: 0;
+		height: 0;
+		margin-bottom: calc((1 - #{$line-height}) * .5em);
+		content: "";
+	}
+}
+
+// PC専用
+@mixin onlyPc() {
+	@media screen and (min-width: 1000px) {
+		@content;
+	}
+}
+
+// PCを除いたデバイス
+@mixin notPc() {
+	@media screen and (max-width: 999px) {
+		@content;
+	}
+}
+
+// タブレット専用
+@mixin onlyTab() {
+	@media screen and (min-width: 641px) and (max-width: 999px) {
+		@content;
+	}
+}
+
+// SP専用
+@mixin onlySp() {
+	@media screen and (max-width: 640px) {
+		@content;
+	}
+}
+
+// SPを除いたデバイス
+@mixin notSp() {
+	@media screen and (min-width: 641px) {
+		@content;
+	}
+}
+
+// 低解像度SP
+@mixin lowSp() {
+	@media screen and (max-width: 360px) {
+		@content;
+	}
+}
+

@@ -1,0 +1,22 @@
+// ブロック内の位置調整
+@use "../setting/variables" as *;
+@use "../setting/mixins" as *;
+
+.u-position-right {
+	text-align: right;
+}
+.u-position-right-flex {
+	display: flex;
+	justify-content: flex-end;
+}
+.u-position-center {
+	text-align: right;
+}
+.u-position-center-flex {
+	display: flex;
+	justify-content: center;
+}
+.u-position-left-flex {
+	display: flex;
+	justify-content: flex-start;
+}

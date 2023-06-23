@@ -1,0 +1,16 @@
+// 見出しスタイル管理用
+@use "../setting/variables" as *;
+@use "../setting/mixins" as *;
+
+.c-hedding-lv1 {
+	font-weight: var(--bold-700);
+	font-size: var(--large-fontSize);
+	line-height: var(--narrow-lineHeight);
+	@include lineHeightCrop(1.35);
+}
+.c-heading-lv2 {
+	font-weight: var(--bold-600);
+	font-size: var(--medium-fontSize);
+	line-height: var(--narrow-lineHeight);
+	@include lineHeightCrop(1.35);
+}

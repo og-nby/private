@@ -1,0 +1,30 @@
+// 検索窓
+@use "../setting/variables" as *;
+@use "../setting/mixins" as *;
+
+.c-search {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: auto;
+	background-color: var(--bg100);
+	background: url(#{$cdn}/guideline/dpm/assets/img/bg_header_search_icon.png#{$bgImgCache}) no-repeat 12px center;
+	background-size: 16px auto;
+	border: 1px solid #E0E0E0;
+	border-radius: 4px;
+	padding: 11px 8px 11px 36px;
+	&__input {
+		flex: 1;
+		width: 100%;
+		height: auto;
+		display: block;
+		font-size: 14px;
+		color: var(--gray400);
+	}
+	&__clear {
+		width: 18px;
+		height: 18px;
+		aspect-ratio: 1 / 1;
+		cursor: pointer;
+	}
+}

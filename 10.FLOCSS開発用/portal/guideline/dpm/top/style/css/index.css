@@ -1,0 +1,19 @@
+.foo {
+	background: url($!{cdnServerUrl}/template/common/img//img/bg_foo.png?v=$!{ccache_css_dpm_top}&d=$!{categoryOfDevice}) no-repeat top left;
+	font-size: var(--medium-fontSize);
+	line-height: var(--default-lineHeight);
+}
+.foo::before {
+	content: "";
+	display: block;
+	height: 0;
+	margin-top: calc((1 - 1.5) * .5em);
+	width: 0;
+}
+.foo::after {
+	content: "";
+	display: block;
+	height: 0;
+	margin-bottom: calc((1 - 1.5) * .5em);
+	width: 0;
+}

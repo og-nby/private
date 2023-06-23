@@ -1,0 +1,89 @@
+★gulpプラグインスタイルガイド環境構築・作業手順
+
+■frontnote（フロントノート）
+【環境構築】
+⓵「portal-operation\01.ガイドライン\02.新規ページ作成用ひな形\Nodeインストーラー\package.json」をGitData配下にあるpackage.jsonにコピペして上書き
+⓶コマンドプロンプトでGitDataに移動し、下記コマンドを実行
+  コマンド：npm install
+⓷「portal-operation\01.ガイドライン\02.新規ページ作成用ひな形\Nodeインストーラー\スタイルガイド」配下のnode_modulesフォルダをGitData配下にあるnode_modulesフォルダにコピペして上書きする
+
+
+【画面表示手順】
+⓵「99.スタイルガイド\portal\guideline\dpm\styleguide\disp」にあるhtmlファイルをブラウザで表示
+
+
+【パーツ作成作業】
+⓵パーツ化するscssファイルを「scss」フォルダ配下に作成
+  →scss内にコメントを記載し、gulpコンパイルすることで自動マークアップされる。コメントの記載方法は「btn.scss」かGitHub（下記）を参考
+    →GitHub：https://github.com/sable-virt/frontnote
+⓶gulpfile.js（68行目あたり）にコンパイルした(する予定の)対象パーツのcssファイルを指定
+⓷ターミナルで「styleguide」フォルダに移動し、gulp実行
+⓸scssのコンパイルと同時にdisp配下にscssファイルと同名のhtmlファイルが作成される
+
+※html生成用のテンプレートを修正する際はGitData配下にある「node_modules\frontnote\template\index.ejs」を修正する
+  →作業者に共有する場合は、
+   「portal-operation\01.ガイドライン\02.新規ページ作成用ひな形\Nodeインストーラー\スタイルガイド\node_modules\frontnote\template\index.ejs」に上書き・プッシュして共有
+
+
+【フォルダ構成・概要】
+├─styleguide
+    ├─css
+    │  └─scssでコンパイルされたcssファイル
+    │  
+    ├─disp
+    │   ├─assets
+    │   │    ├─css
+    │   │    │  └─スタイルガイド全体の共通css類
+    │   │    │
+    │   │    └─他フォルダはスタイルガイドで使用しているライブラリや画像
+    │   │
+    │   ├─overview
+    │   │    └─overviewページ内に表示するmbファイル（ファイル更新後にいずれかのscssファイルを更新で画面に反映される）
+    │   │
+    │   └─scssでコンパイル時に生成されるhtmlファイル（画面表示）
+    │
+    ├─img
+    │   └─画面表示（プレビュー）に使用する画像類
+    │
+    ├─scss
+    │   └─パーツ化するscssファイル
+    ├─vm
+    │  └─vm用にcssを圧縮したファイル
+    │
+    └─gulpfile.js（スタイルガイド用に改修済）
+
+
+【STGアップの手順】
+⓵クリックログやvm変数をhtmlファイルのみに対して一括置換　※下記の置換手順を参照
+⓶コマンドプロンプトでdispフォルダに移動し「.html」を「.vm」ファイルにコマンドで拡張子変換
+  コマンド：ren *.html *.vm
+
+⓷対象フォルダをzipにまとめてSTGアップ
+
+※コンパイル作業に戻る場合は下記コマンドでhtmlファイルに拡張子を戻す
+  コマンド：ren *.vm *.html
+
+【置換手順】
+■クリックログ
+・案1
+⓵置換前（scssコード）
+「"★★クリックログ★★"」
+
+⓶htmlファイルのみに対して⓵を対象に下記で一括置換する
+「&quot;&#35;clicklog(&quot;99001_&#36;&#33;&#123;linkIdDevice&#125;9_dummy&quot;, &quot;&#36;&#33;&#123;portalServerUrl&#125;/&quot;, &quot;&#36;&#33;&#123;ablogout&#125;&quot;)&quot;」
+
+
+・案2
+⓵置換前（scssコード）
+「"#clicklog("99001_$!{linkIdDevice}9_dummy", "$!{portalServerUrl}/", "$!{ablogout}")"」
+
+⓶スタイルガイドによるコンパイル後のエスケープコード自動生成（htmlコード）
+「&#34;#clicklog(&#34;99001_$!{linkIdDevice}9_dummy&#34;, &#34;$!{portalServerUrl}/&#34;, &#34;$!{ablogout}&#34;)&#34;」
+
+⓷htmlで置換された⓶を対象に下記で一括置換する
+「&quot;&#35;clicklog(&quot;99001_&#36;&#33;&#123;linkIdDevice&#125;9_dummy&quot;, &quot;&#36;&#33;&#123;portalServerUrl&#125;/&quot;, &quot;&#36;&#33;&#123;ablogout&#125;&quot;)&quot;」
+
+
+【STG環境参考URL】
+上記手順を含めテスト作業をSTGにアップ
+https://stg.dmarket.docomo.ne.jp/test/testoki/guideline/dpm/styleguide/disp/link.html

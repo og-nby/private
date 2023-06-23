@@ -1,0 +1,10 @@
+## 共通CSSキャッシュ用vm
+
+## CSS用キャッシュを定義
+#set($cache_css_dpm_search = "202306221823")
+
+## 画像用キャッシュを定義
+#set($cache_img_dpm_search = "202306221147")
+
+## JS用キャッシュを定義
+#set($cache_js_dpm_search  = "202306221147")

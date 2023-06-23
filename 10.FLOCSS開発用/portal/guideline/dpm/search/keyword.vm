@@ -1,0 +1,98 @@
+## 個別ページ定義ファイル
+#parse("$!{baseDirectory}/guideline/dpm/search/define/define.vm")
+
+<!DOCTYPE HTML>
+<html lang="ja">
+	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+		<meta charset="UTF-8">
+		<title>キーワード検索・閲覧履歴｜dマーケット｜NTTドコモ公式</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="content-script-type" content="text/javascript">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<meta property="og:title" content="タイトル｜dマーケット｜NTTドコモ公式">
+		<meta property="og:description" content="ここにディスクリプション">
+		## <meta property="og:image" content="$!{cdnServerUrl}/★dirPath★/img/ogp_*folderName*.png">
+		## <meta property="og:url" content="$!{portalServerUrl}/★dirPath★/index.html">
+		<meta property="og:type" content="website">
+		<meta property="fb:app_id" content="197164534262354">
+		<meta name="twitter:card" content="summary_large_image">
+		## <link rel="canonical" href="$!{portalServerUrl}/★dirPath★/index.html">
+		## dマーケット内共通ファビコン・ホームアイコン用vm
+		#parse("$!{baseDirectory}/template/parts/parts_common_favicon.vm")
+		<link rel="stylesheet" href="$!{aplServerUrl}/guideline/dpm/assets/style/style_css.cssv?v=$!{cache_css_dpm_assets}&d=$!{categoryOfDevice}">
+		<link rel="stylesheet" href="$!{aplServerUrl}/guideline/dpm/search/style/style_css.cssv?v=$!{cache_css_dpm_search}&d=$!{categoryOfDevice}">
+
+	</head>
+	<body onunload="">
+
+		<div class="l-root">
+
+			## ヘッダー用vm
+			#parse("$!{baseDirectory}/guideline/dpm/assets/header/parts_g_header.vm")
+
+			<main class="l-wrapper">
+				## 将来的にここにPCTABでサイドナビが入ることを想定↓
+				## #parse("$!{baseDirectory}/guideline/dpm/assets/navigation/parts_nav_pctab.vm")
+				## 将来的にここにPCTABでサイドナビが入ることを想定↑
+				<div class="l-container">
+
+					<div class="p-section-search">
+						<div class="p-section-search__input">
+							<div class="c-search">
+								<input class="c-search__input" type="text" id="searchInput" placeholder="何をお探しですか？">
+								<div class="c-search__clear"><img src="$!{cdnServerUrl}/guideline/dpm/assets/img/icon_search_clear.png?v=$!{cache_img_dpm_assets}&d=$!{categoryOfDevice}" alt=""></div>
+							</div>
+							<!-- /.c-search -->
+						</div>
+						<div class="p-section-search__cancel">
+							<span class="c-text-link">キャンセル</span>
+							<!-- /.c-text-link -->
+						</div>
+					</div>
+					<!-- /.p-section-search -->
+
+					<section class="c-section">
+						<div class="c-section__horizontal-padding-off">
+							<div class="c-tabs">
+								<div class="c-tabs__item is-tabs-active">キーワード検索</div>
+								<div class="c-tabs__item">閲覧履歴</div>
+								<!-- /.c-tas__item -->
+							</div>
+							<!-- /.c-tas -->
+
+						</div>
+						<!-- /.c-section__horizontal-padding-off -->
+
+						<section class="p-section-search">
+							<header class="p-section-search__header">
+								<h2 class="p-search-headdr-title">検索履歴</h2>
+								<div class="p-search-headdr-delete">すべて削除</div>
+							</header>
+							<!-- /.p-section-search__header -->
+							
+						</section>
+						<!-- /.p-section-search -->
+
+
+					</section>
+
+				</div>
+				<!-- /.l-container -->
+			</main>
+			<!-- /.l-wrapper -->
+	
+	
+			## フッター
+			#parse("$!{baseDirectory}/guideline/dpm/assets/footer/parts_g_footer.vm")
+
+
+		</div>
+		<!-- /.l-root-container -->
+
+	</body>
+</html>

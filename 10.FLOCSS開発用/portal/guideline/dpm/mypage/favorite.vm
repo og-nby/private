@@ -1,0 +1,134 @@
+## 個別ページ定義ファイル
+#parse("$!{baseDirectory}/guideline/dpm/mypage/define/define.vm")
+
+<!DOCTYPE HTML>
+<html lang="ja">
+	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+		<meta charset="UTF-8">
+		<title>お気に入り｜dマーケット｜NTTドコモ公式</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="content-script-type" content="text/javascript">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<meta property="og:title" content="タイトル｜dマーケット｜NTTドコモ公式">
+		<meta property="og:description" content="ここにディスクリプション">
+		## <meta property="og:image" content="$!{cdnServerUrl}/★dirPath★/img/ogp_*folderName*.png">
+		## <meta property="og:url" content="$!{portalServerUrl}/★dirPath★/index.html">
+		<meta property="og:type" content="website">
+		<meta property="fb:app_id" content="197164534262354">
+		<meta name="twitter:card" content="summary_large_image">
+		## <link rel="canonical" href="$!{portalServerUrl}/★dirPath★/index.html">
+		## dマーケット内共通ファビコン・ホームアイコン用vm
+		#parse("$!{baseDirectory}/template/parts/parts_common_favicon.vm")
+		<link rel="stylesheet" href="$!{aplServerUrl}/guideline/dpm/assets/style/style_css.cssv?v=$!{cache_css_dpm_assets}&d=$!{categoryOfDevice}">
+		<link rel="stylesheet" href="$!{aplServerUrl}/guideline/dpm/mypage/style/style_css.cssv?v=$!{cache_css_dpm_mypage}&d=$!{categoryOfDevice}">
+
+	</head>
+	<body onunload="">
+
+		<div class="l-root">
+
+			## ヘッダー用vm
+			#parse("$!{baseDirectory}/guideline/dpm/assets/header/parts_g_header.vm")
+
+			<main class="l-wrapper">
+				## 将来的にここにPCTABでサイドナビが入ることを想定↓
+				## #parse("$!{baseDirectory}/guideline/dpm/assets/navigation/parts_nav_pctab.vm")
+				## 将来的にここにPCTABでサイドナビが入ることを想定↑
+				<div class="l-container">
+
+					## お気に入り
+					<section class="c-section">
+						<header class="c-section__header">
+							<h1 class="c-hedding-lv1">お気に入り</h1>
+						</header>
+						<!-- /.c-hedding-lv1 -->
+
+						<div class="c-section__horizontal-padding-off">
+							<div class="c-tabs">
+								<div class="c-tabs__item is-tabs-active">商品</div>
+								<div class="c-tabs__item">ショップ</div>
+								<!-- /.c-tas__item -->
+							</div>
+							<!-- /.c-tas -->
+						</div>
+						<!-- /.c-section__horizontal-padding-off -->
+
+						<div class="p-wrapper-notice">
+							<div class="p-wrapper-notice__info">
+								<div class="p-wrapper-notice-inner">
+									<p class="c-text-sm">お気に入りした商品に関連したお得情報をお知らせします</p>
+									<p><a class="c-text-link" href="#">お知らせを見る</a></p>
+								</div>
+								<!-- /.p-notice-inner -->
+							</div>
+							<!-- / -->
+							<div class="p-wrapper-notice__num"><span class="isResultNum">6</span>件</div>
+							<!-- / -->
+						</div>
+						<!-- /.p-notice -->
+
+						<div class="p-wrapper-editing">
+							<span class="c-text-link is-edit-open">編集</span>
+						</div>
+						<!-- /.c-wrapper-order__editing -->
+						<div class="p-wrapper-order__sorting">
+							<div class="p-wrapper-sorting-order">
+								<span class="p-wrapper-sorting-order__text">並べ替え</span>
+								<!-- <span class="p-wrapper-sorting-order__text is-order-opened">並べ替え</span> -->
+							</div>
+							<!-- /.c-wrapper-order__sorting -->
+							<div class="p-wrapper-sorting-search">
+								<span class="p-wrapper-sorting-search__text">絞り込み</span>
+							</div>
+							<!-- /.c-wrapper-order__sorting -->
+						</div>
+						<!-- /.c-wrapper-order__editing -->
+
+
+					</section>
+
+
+
+
+
+
+
+
+
+
+					## スポンサーバナー
+					<div class="c-section">
+						<div class="u-position-right-flex">
+							<div class="c-button-sponsored">
+								<span class="c-button-sponsored__text">スポンサー</span>
+								<span class="c-button-sponsored__icon"><img src="$!{cdnServerUrl}/guideline/dpm/assets/img/icon_sponsored.png?v=$!{cache_img_dpm_mypage}&d=$!{categoryOfDevice}" alt=""></span>
+							</div>
+						</div>
+						<!-- /.u-position-right-flex -->
+						<div class="c-wrapper-bnr-sponsered">
+							<a href="#"><img src="$!{cdnServerUrl}/guideline/dpm/assets/img/bnr_dummy.png?v=$!{cache_img_dpm_mypage}&d=$!{categoryOfDevice}" alt=""></a>
+						</div>
+						<!-- /.c-wrapper-bnr-sponsered -->
+					</div>
+					<!-- /.c-section -->
+
+				</div>
+				<!-- /.l-container -->
+			</main>
+			<!-- /.l-wrapper -->
+	
+	
+			## フッター
+			#parse("$!{baseDirectory}/guideline/dpm/assets/footer/parts_g_footer.vm")
+
+
+		</div>
+		<!-- /.l-root-container -->
+
+	</body>
+</html>

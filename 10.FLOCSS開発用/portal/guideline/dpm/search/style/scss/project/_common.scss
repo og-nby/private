@@ -1,0 +1,19 @@
+// 個別ページ用スタイル
+
+@use "../setting/variables" as *;
+@use "../setting/mixins" as *;
+
+.p-section-search {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+	width: 100%;
+	padding: 24px 8px;
+}
+.p-section-search__input {
+	flex: 1;
+}
+.p-section-search__cancel {
+	flex: 0 0 70px;
+	text-align: center;
+}
