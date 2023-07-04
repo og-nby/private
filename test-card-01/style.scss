@@ -174,7 +174,141 @@
     }
 }
 
+.c-section-inner:not(:last-child) {
+    margin-bottom: 16px;
+}
 
-.foo {
-    padding: 0;
+.c-heading-lv2 {
+    font-size: 14px;
+    line-height: calc(18 / 14);
+    margin-bottom: 8px;
+}
+
+.c-text-sm {
+    font-size: 12px;
+    line-height: calc(18 / 12);
+}
+.c-text-xsm {
+    font-size: 10px;
+    line-height: calc(16 / 10);
+}
+.u-text-em {
+    font-weight: 700;
+}
+
+.u-lineheight-narrow {
+    line-height: var(--narrow-lineHeight);
+}
+
+.u-lineheight-wide {
+    line-height: var(--wide-lineHeight);
+}
+
+.c-title-tabs {
+    font-size: 13px;
+    line-height: calc(18 / 13);
+    font-weight: 700;
+    color: var(--gray400);
+    &.--current {
+        color: var(--gray800);
+    }
+}
+.c-heading-lv1 {
+    &.--notes {
+        display: flex;
+        align-items: baseline;
+    }
+    &__notes {
+        font-size: 12px;
+        line-height: 1;
+        font-weight: normal;
+        margin-left: 4px;
+    }
+}
+
+.c-title {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: calc(16 / 13);
+}
+
+.u-color-primary {
+	color: var(--primary);
+}
+
+.u-color-gray400 {
+	color: var(--gray400);
+}
+
+
+.c-text-price {
+	display: flex;
+	align-items: baseline;
+	font-size: 18px;
+	line-height: calc(20 / 18);
+	&::before {
+		content: "¥";
+		font-size: 12px;
+		line-height: calc(20 / 12);
+	}
+}
+.c-text-price-down {
+	display: flex;
+	align-items: baseline;
+	font-size: 10px;
+	line-height: calc(20 / 10);
+	color: var(--gray400);
+	text-decoration: line-through;
+	&::before {
+		content: "¥";
+	}
+}
+
+.c-text-point-get {
+	display: flex;
+	line-height: 1;
+	font-weight: 700;
+	color: var(--primary);
+	&:before {
+		content: "";
+		display: block;
+		width: 16px;
+		height: 16px;
+		aspect-ratio: 1 / 1;
+		background: url(/assets/img/icon_assets_dpoint.png) no-repeat center center;
+		background-size: contain;
+	}
+	&:after {
+		content: "％";
+	}
+}
+
+.c-text-point-total {
+	display: flex;
+	align-items: baseline;
+	font-size: 22px;
+	line-height: calc(33 / 22);
+	font-weight: 700;
+	color: var(--primary);
+	&:after {
+		content: "pt";
+		font-size: 14px;
+		line-height: calc(21 / 14);
+		display: inline-block;
+		margin-left: 2px;
+	}
+}
+.c-label-secondary-vsm {
+	display: flex;
+	display: inline-block;
+	align-items: center;
+    background-color: #fff;
+    border: 1px solid var(--gray400);
+    color: var(--gray800);
+    font-size: 10px;
+    justify-content: center;
+	width: auto;
+	height: 18px;
+	border-radius: 16px;
+	padding: 0 8px;
 }
