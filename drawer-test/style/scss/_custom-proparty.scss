@@ -1,0 +1,63 @@
+// Style
+:root {
+	// Base Color
+	--primary:#CF0F30;
+
+	--secondary100:#FFD4DC;
+	--secondary200:#FFE9ED;
+	--bg100:#F9F9F9;
+
+	--textLink:#0C7ECC;
+
+	--monoWhite:#FFFFFF;
+	--gray050:#F6F6F6;
+	--gray100:#F0F0F0;
+	--gray200:#E0E0E0;
+	--gray300:#D0D0D0;
+	--gray400:#B0B0B0;
+	--gray500:#808080;
+	--gray600:#606060;
+	--gray700:#505050;
+	--gray800:#383838;
+	--gray900:#282828;
+	--monoBlack:#000000;
+
+	--star:#FFBB0B;
+	--star45:#FF4500;
+	--star0:#E0E0E0;
+
+	// Base Typography
+	// Size
+	--xsmall-fontSize:  10px;
+	--small-fontSize:  12px;
+	--medium-fontSize: 14px;
+	--large-fontSize:  18px;
+
+	// Bold
+	--bold-600: 600;
+	--bold-700: 700;
+
+	// Base Line Heights
+	--narrow-lineHeight: 1.35;
+	--default-lineHeight: 1.5;
+	--wide-lineHeight: 1.75;
+
+	// Border-radius
+	--radius-low: 4px;
+	--radius-medium: 8px;
+	--radius-max: 100%;
+
+	// Shadows
+	--lowLight-shadow:      0px 0px 8px rgba(0, 0, 0, 0.08);
+	--mediumLight-shadow:   0px 2px 8px rgba(0, 0, 0, 0.15);
+	--strongLight-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.15);
+
+	// Base Spacing
+	--bs8:  8px;
+	--bs16: 16px;
+	--bs24: 24px;
+	--bs48: 48px;
+	--bs64: 64px;
+	--bs96: 96px;
+
+}

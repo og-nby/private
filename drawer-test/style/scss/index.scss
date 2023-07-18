@@ -1,0 +1,222 @@
+// test style
+
+@use "_custom-proparty" as *;
+
+// founddation
+html {
+    font-size: 14px;
+    line-height: var(--default-lineHeight);
+    color: var(--gray800);
+}
+body {
+    background-color: var(--gray400);
+    &.is-drawer-active {
+        overflow-y: scroll;
+    }
+}
+a,a:hover,a:active,a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    width: 100%;
+    vertical-align: baseline;
+}
+ol,ul,li {
+    list-style: nonw;
+    marker: none;
+}
+
+// layout
+.l-root {
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+}
+.l-header {
+    display: flex;
+    width: 100%;
+    height: 66px;
+    padding: 8px 16px;
+    background-color: #fff;
+    border-bottom: solid 4px var(--gray400);
+    position: relative;
+}
+
+.l-conatiner {
+    background-color: #fff;
+    width: 100%;
+    max-width: 1080px;
+    height: calc(100vh - 50px);
+    position: relative;
+    overflow: hidden;
+}
+
+.l-header-logo {
+    width: 140px;
+    margin: auto;
+}
+
+// drawer 
+//var
+$drawer-menu-color: #000;
+$drawer-btn-color: #555;
+$drawer-bg-color: rgba(0, 0, 0, .7);
+$transition-duration: .3s;
+
+//Style
+.drawer {
+    //Drawer Button
+    &__btn {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        z-index: 10002;
+        width: 40px;
+        height: 47px;
+        background-color: #fff;
+        overflow: hidden;
+        cursor: pointer;
+        
+        .humb {
+            width: 100%;
+            height: 28px;
+            padding: 6px;
+            span {
+                display: block;
+                width: 50%;
+                height: 2px;
+                background-color: var(--gray800);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transition: $transition-duration;
+                transform: translate(-50%, -50%);
+                &:nth-child(1) { transform: translate(-50%, -8px); }
+                &:nth-child(2) { transform: translate(-50%, -50%); }
+                &:nth-child(3) { transform: translate(-50%, 6px); }
+            }
+
+        }
+        .menu-text {
+            text-align: center;
+            &::after {
+                content: "メニュー";
+                font-size: 8px;
+            }
+        }
+        
+        &.is-drawer-active {
+            .humb {
+                span {
+                    &:nth-child(1) { transform: translate(-50%, 0) rotate(45deg); }
+                    &:nth-child(2) {transform: translate(100%, 0); opacity: 0; }
+                    &:nth-child(3) { transform: translate(-50%, 0) rotate(-45deg); }
+                }
+
+            }
+            .menu-text::after {
+                content: "閉じる";
+            }
+        }
+    }
+    
+    //Drawer Menu
+    &__menu {
+        position: absolute;
+        inset: 0;
+        z-index: 10001;
+        width: 300px;
+        height: 100vh;
+        background-color: var(--gray100);
+        overflow-y: auto;
+        transition: $transition-duration;
+        transform: translateX(-100%);
+        opacity: 0;
+
+        &.is-drawer-active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    //Overlay Background
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 10000;
+        width: 100%;
+        height: 100vh;
+        background-color: $drawer-bg-color;
+        transition: $transition-duration;
+        transform: translateX(-100%);
+        opacity: 0;
+        cursor: pointer;
+        
+        &.is-drawer-active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+
+// component
+
+.l-navigation-menu {
+    display: contents;
+}
+.l-navigation-menu__ttl {
+    background-color: var(--gray400);
+    padding: var(--bs8);
+    color: #fff;
+    font-weight: var(--bold-700);
+}
+.l-navigation-menu__list {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: #fff;
+    border: solid var(--gray200);
+    border-width: 1px 0 0 1px;
+}
+.l-navigation-menu__list li {
+    border: solid var(--gray200);
+    border-width: 0 1px 1px 0;
+}
+.l-text-nav-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: var(--bold-700);
+    font-size: var(--small-fontSize);
+    padding: var(--bs8) 14px var(--bs8) var(--bs8);
+    // background: ulr($!{$cdnServerUrl}/assets/img/icon_assets_nav_arrow.svg?v=$!{cache_css_assets}&d=$!{categoryOfDevice}) no-repeat center right;
+    background-size: contain;
+}
+
+.skeleton-screen {
+    /* スケルトンスクリーンのスタイル */
+}
+
+.swiper-container {
+    display: none;
+    transition: .3s ease;
+}
+
+// Swiperカスタマイズ
+
+
+
+
+.c-wrapper-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+    }
+}

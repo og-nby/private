@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ドロワーメニューテスト</title>
+	<link rel="stylesheet" href="https://unpkg.com/destyle.css@4.0.0/destyle.min.css">
+	<link rel="stylesheet" href="/drawer-test/style/css/index.css?v=2023071701">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.css">
+	<script
+  src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+  integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE="
+  crossorigin="anonymous" defer></script>
+	<script src="/drawer-test/js/index.js?v=202307172042" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js" defer></script>
+
+</head>
+<body>
+	<div class="l-root">
+		<header class="l-header">
+			<h1 class="l-header-logo">ドロワーメニューテスト</h1>
+			<!-- /.l-header-logo -->
+			<div class="drawer__btn">
+				<div class="humb">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="menu-text"></div>
+				<!-- / -->
+			</div>
+
+		</header>
+		<div class="l-wrapper">
+			<!-- /.l-header -->
+			<div class="l-conatiner">
+
+
+				<div class="drawer__overlay"></div>
+				<div class="drawer__menu">
+					<section class="l-navigation-menu">
+						<h2 class="l-navigation-menu__ttl">人気メニュー</h2>
+						<ul class="l-navigation-menu__list">
+							<li><a class="l-text-nav-link" href="#">くじ・すごろく</a></li>
+							<li><a class="l-text-nav-link --icon-stamp" href="#">スタンプラリー</a></li>
+							<li><a class="l-text-nav-link  --icon-sale" href="#">セール</a></li>
+							<li><a class="l-text-nav-link  --icon-campaign" href="#">キャンペーン</a></li>
+							<li><a class="l-text-nav-link  --icon-coupon" href="#">クーポン</a></li>
+							<li><a class="l-text-nav-link  --icon-mypage" href="#">マイページ</a></li>
+						</ul>
+					</section>
+					<!-- /.l-g-menu -->
+
+					<section class="l-navigation-menu">
+						<h2 class="l-navigation-menu__ttl">その他のメニュー</h2>
+						<ul class="l-navigation-menu__list">
+							<li><a class="l-text-nav-link " href="#">ガイド</a></li>
+							<li><a class="l-text-nav-link " href="#">ランキング</a></li>
+							<li><a class="l-text-nav-link " href="#">メルマガ設定</a></li>
+							<li><a class="l-text-nav-link " href="#">ご質問・お問い合わせ</a></li>
+							<li><a class="l-text-nav-link " href="#">サイトご利用にあたって</a></li>
+						</ul>
+
+					</section>
+					<!-- /.l-g-menu -->
+
+					<section class="l-navigation-menu">
+						<h2 class="l-navigation-menu__ttl">dアカウント関連メニュー</h2>
+						<ul class="l-navigation-menu__list">
+							<li><a class="l-text-nav-link  --bg-secondary" href="#">会員登録情報・削除</a></li>
+							<li><a class="l-text-nav-link  --bg-secondary" href="#">二段階認証について</a></li>
+						</ul>
+					</section>
+					<!-- /.l-g-menu -->
+				</div>
+				<!-- Drawer end -->
+
+				<section class="c-section">
+
+					<div id="skeleton-screen" class="skeleton-screen">
+						読み込み中…
+					</div>
+
+					<div id="swiper-container" class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide c-wrapper-img"><img src="/assets/img/product-image-1.png" alt=""></div>
+							<div class="swiper-slide c-wrapper-img"><img src="/assets/img/product-image-2.png" alt=""></div>
+							<div class="swiper-slide c-wrapper-img"><img src="/assets/img/product-image-3.png" alt=""></div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+
+
+				</section>
+				<!-- /.c-section -->
+
+			</div>
+			<!-- /.l-container -->
+
+		</div>
+		<!-- /.l-wrapper -->
+	</div>
+	<!-- /.l-root -->
+</body>
+</html>
